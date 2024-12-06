@@ -4,7 +4,7 @@ import "./globals.css";
 import Providers from "./providers";
 
 export const metadata = {
-    title: "Thames - Software Engineer Personal Portfolio Next.js 14 template",
+    title: "Kerrie Mariah - Software Engineer",
 };
 
 export default function RootLayout({ children }) {

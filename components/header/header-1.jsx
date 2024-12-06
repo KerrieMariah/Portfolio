@@ -35,7 +35,7 @@ export default function Header1() {
                                             height={36}
                                             width={160}
                                             src="/images/logo/logo.png"
-                                            alt="THAMES"
+                                            alt="KerrieMariah"
                                             className="h-100 w-auto"
                                             priority
                                         />
@@ -48,7 +48,7 @@ export default function Header1() {
                                             height={36}
                                             width={160}
                                             src="/images/logo/black-logo.png"
-                                            alt="THAMES"
+                                            alt="KerrieMariah"
                                             className="h-100 w-auto"
                                             priority
                                         />
