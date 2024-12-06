@@ -148,11 +148,8 @@ export default function WorkModal() {
                                             </h6>
                                             <ul className="tag-list">
                                                 {/* tag start */}
-                                                {workInfo?.Tags?.split(", ").map((item) => (
-                                                    <li
-                                                      
-                                                        className="d-inline-block pr-10 f-700"
-                                                    >
+                                                {workInfo?.Tags?.split(", ").map((item, index) => (
+                                                    <li key={index} className="d-inline-block pr-10 f-700">
                                                         <Link
                                                             className="secondary-color3 d-block"
                                                             href="#"
