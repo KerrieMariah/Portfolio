@@ -8,7 +8,7 @@ const contact = [
     {
         icon: "fas fa-phone-alt",
         title: "Phone",
-        text: "+1 352 7889",
+        text: "+1 (352) 316-7889",
     },
     {
         icon: "fas fa-envelope",
