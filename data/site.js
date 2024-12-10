@@ -200,7 +200,7 @@ export const service = [
     },
     {
         iconUrl: "/images/work/service-icon4.png",
-        title: "Security Analysis",
+        title: "SEO Analysis",
         description:
             "Boost your online visibility with data-driven SEO strategies and in-depth analysis, combining keyword optimization, competitive research, and performance tracking to elevate your brand’s reach and impact.",
     },
