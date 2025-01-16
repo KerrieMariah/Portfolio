@@ -653,8 +653,8 @@ a:hover,
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-    filter: grayscale(50%);
-    -webkit-filter: grayscale(50%);
+    /* filter: grayscale(50%); */
+    /* -webkit-filter: grayscale(50%); */
 }
 .single-portfolio::before {
     content: "";

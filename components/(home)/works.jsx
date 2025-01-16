@@ -32,30 +32,47 @@ export default function Works() {
     const grid = useRef(null);
 
     useEffect(() => {
+        // Wait for all images to load before initializing Isotope
+        const images = grid.current.getElementsByTagName('img');
+        const loadedImages = [];
+
         const initIsotope = () => {
-            imagesLoaded(grid.current, () => {
-                isotope.current = new Isotope(grid.current, {
-                    itemSelector: ".grid-item",
-                    percentPosition: true,
-                    layoutMode: "masonry",
-                    masonry: {
-                        columnWidth: ".grid-item",
-                    },
-                });
+            isotope.current = new Isotope(grid.current, {
+                itemSelector: ".grid-item",
+                percentPosition: true,
+                masonry: {
+                    columnWidth: ".grid-item",
+                }
             });
+            // Force a layout update
+            isotope.current.layout();
         };
 
-        initIsotope();
-
-        const filterButtons = document.querySelectorAll(
-            ".portfolio-menu button"
-        );
-        filterButtons.forEach((button) => {
-            button.addEventListener("click", () => {
-                const filterValue = button.getAttribute("data-filter");
-                isotope.current.arrange({ filter: filterValue });
-            });
+        // Track each image load
+        Array.from(images).forEach(img => {
+            if (img.complete) {
+                loadedImages.push(img);
+            } else {
+                img.onload = () => {
+                    loadedImages.push(img);
+                    // Initialize Isotope once all images are loaded
+                    if (loadedImages.length === images.length) {
+                        initIsotope();
+                    }
+                };
+            }
         });
+
+        // If all images were already loaded
+        if (loadedImages.length === images.length) {
+            initIsotope();
+        }
+
+        return () => {
+            if (isotope.current) {
+                isotope.current.destroy();
+            }
+        };
     }, []);
 
     return (
