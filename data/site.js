@@ -304,7 +304,7 @@ export const awardInfo = [
         association: "Elite Mortgage Source",
         location: "Cape Coral, FL",
         description:
-            "Client was paying over $2,000 a month for a non-functioning costs. I was able to rebuild his website without broken links and reduce his payments to $15 a month.",
+            "Client was paying over $2,000 a month for a non-functioning website. I was able to rebuild his website without broken links and reduce his payments to $15 a month.",
     },
 ];
 
