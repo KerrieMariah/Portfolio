@@ -36,7 +36,7 @@ export default function AwardAreaLine({ data, index }) {
             </div>
 
             <div className="col-xl-3 col-lg-3 col-md-3 col-sm-11 col-12">
-                <div className="award-content">
+                <div className="award-content award-association">
                     <h3 className="mb-10">{data.association}</h3>
                     <p className="meta-text-color">{data.location}</p>
                 </div>

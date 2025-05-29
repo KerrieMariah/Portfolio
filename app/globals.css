@@ -651,10 +651,10 @@
     }
 }
 
-.img-grayscale {
+/* .img-grayscale {
     filter: grayscale(70%);
     transition: filter 0.3s ease;
-}
+} */
 
 /* Personal Site Button */
 .personal-site-btn {
@@ -895,6 +895,180 @@ footer .social li a:hover {
     }
 }
 
+@media (max-width: 991.98px) {
+    .about-parallax-image-wrapper {
+        width: 100vw;
+        height: 260px;
+        overflow: hidden;
+        position: relative;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+    }
+    .about-parallax-image {
+        width: 100%;
+        height: 100%;
+        background-image: url('/images/about/about-section.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed; /* Parallax effect */
+        filter: grayscale(70%);
+        border-radius: 0 0 16px 16px;
+    }
+    .about-info,
+    .about-info *,
+    .about-content,
+    .about-content * {
+        text-align: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+}
 
+@media (max-width: 767px) {
+    .portfolio-grid .grid-item {
+      margin-bottom: 32px;
+    }
+    .work-card {
+      padding: 12px;
+    }
+    .work-card-image img,
+    .work-card-image {
+      width: 100% !important;
+      height: 300px !important;
+      border-radius: 12px;
+    }
+    .work-card-content {
+      padding: 0 4px;
+    }
+    .work-card-title,
+    .work-card-desc,
+    .work-card-category {
+      text-align: center;
+    }
+    .work-card-tech {
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .portfolio-filter-btn {
+        font-size: 15px;
+        padding: 8px 16px;
+        margin: 0 4px 8px 4px;
+      }
+      .view-more-btn {
+        font-size: 17px;
+        padding: 12px 28px;
+      }
+      .work-card {
+        box-shadow: 0 8px 32px rgba(46, 46, 55, 0.18), 0 1.5px 6px rgba(199, 81, 66, 0.10);
+        /* You can adjust the shadow values for more/less intensity */
+      }
+
+      .price-wrapper {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 24px;
+        margin-top: 32px !important;
+      }
+      .single-price {
+        padding: 24px 12px 32px 12px !important;
+        margin-bottom: 0 !important;
+        box-shadow: 0 8px 32px rgba(46, 46, 55, 0.18), 0 1.5px 6px rgba(199, 81, 66, 0.10);
+        min-width: 0;
+        width: 100%;
+        max-width: 400px;
+      }
+      .popular-badge {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        top: -18px !important;
+        font-size: 13px !important;
+        padding: 2px 10px !important;
+      }
+      /* .price-list li {
+        justify-content: center !important;
+      } */
+      .single-price,
+      .single-price h3 {
+        text-align: center !important;
+      }
+      .price-wrapper {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 40px; /* More space between cards */
+        margin-top: 32px !important;
+        padding-left: 12px;
+        padding-right: 12px;
+        width: 100%;
+      }
+      .single-price {
+        padding: 24px 20px 32px 20px !important; /* More horizontal padding */
+        margin: 0 auto !important; /* Center the card */
+        box-shadow: 0 8px 32px rgba(46, 46, 55, 0.18), 0 1.5px 6px rgba(199, 81, 66, 0.10);
+        min-width: 0;
+        width: 100%;
+        max-width: 400px;
+      }
+      .award-association {
+        display: none !important;
+      }
+
+  }
+
+
+  /* --- Contact Form Desktop Improvements --- */
+@media (min-width: 992px) {
+    .contact-form {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 32px 40px 40px 40px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(46,46,55,0.08);
+    }
+    .contact-form .row > [class*="col-"] {
+      margin-bottom: 24px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 1.1em;
+      padding: 16px 18px;
+    }
+    .contact-form button[type="submit"] {
+      margin-top: 12px;
+      width: 100%;
+      font-size: 1.1em;
+      padding: 14px 0;
+      border-radius: 8px;
+    }
+  }
+  
+/* --- Contact Form Mobile Improvements --- */
+@media (max-width: 991px) {
+.contact-form {
+    padding: 18px 6px 24px 6px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(46,46,55,0.10);
+}
+.contact-form .row > [class*="col-"] {
+    margin-bottom: 18px;
+}
+.contact-form input,
+.contact-form textarea {
+    font-size: 1em;
+    padding: 13px 12px;
+}
+.contact-form button[type="submit"] {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 1em;
+    padding: 12px 0;
+    border-radius: 7px;
+}
+}
 
 

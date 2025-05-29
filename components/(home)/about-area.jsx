@@ -17,8 +17,9 @@ const defaultOptions = {
 
 export default function AboutArea() {
     return (
-        <div id="about" className="about-area mt-170 mb-105">
-            <div className="about-content-wrapper position-relative">
+        <div id="about" className="about-area mt-170 md:about-area mt-170 mb-105">
+            {/* Desktop Layout */}
+            <div className="about-content-wrapper position-relative d-none d-lg-block">
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-6 col-lg-6 col-md-12 offset-md-0 col-sm-11 offset-sm-1 col-12">
@@ -69,6 +70,20 @@ export default function AboutArea() {
                         </div>
                     </div>
                 </div>
+            </div>
+            {/* Mobile Content */}
+            <div className="about-content-wrapper position-relative d-block d-lg-none">
+                <div className="container">
+                    <div className="row justify-content-center">
+                        <div className="col-12">
+                            <AboutInfo />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* Mobile Parallax Image */}
+            <div className="about-parallax-image-wrapper d-block d-lg-none">
+                <div className="about-parallax-image" />
             </div>
         </div>
     );

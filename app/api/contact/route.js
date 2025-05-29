@@ -21,8 +21,7 @@ export async function POST(req) {
         <h3>New Contact Form Submission</h3>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Subject:</strong> ${subject}</p>
+        <p><strong>Subject:</strong> Kerrie Mariah Contact</p>
         <p><strong>Message:</strong> ${msg}</p>
       `
     };

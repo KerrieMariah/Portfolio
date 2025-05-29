@@ -34,7 +34,15 @@ export default function ContactForm() {
 
     return (
         <div className="contact-wrapper">
-            <div className="contact-form mt-45">
+            <div className="contact-form mt-45" style={{boxShadow: "0 15px 40px rgba(0, 0, 0, 0.15)", borderRadius: "8px", padding: "30px", backgroundColor: "#fff"}}>
+                <div className="form-header text-center mb-4">
+                    <h3 className="mb-2" style={{fontSize: "24px", fontWeight: "600", color: "#333"}}>
+                        Get In Touch
+                    </h3>
+                    <p className="text-muted mb-0" style={{fontSize: "16px", lineHeight: "1.5"}}>
+                        I'll get back to you as soon as possible
+                    </p>
+                </div>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="contact-info pt-20">
                         <div className="row">
@@ -87,52 +95,6 @@ export default function ContactForm() {
                                 {errors.email && (
                                     <span className="ui-error">
                                         {errors.email.message}
-                                    </span>
-                                )}
-                            </div>
-
-                            <div
-                                className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 pr6 mb-12"
-                                data-aos="fade-up"
-                                data-aos-anchor-placement="top-bottom"
-                                data-aos-duration={800}
-                            >
-                                <input
-                                    className="phone w-100 theme-border pl-20 pt-15 pb-15 pr-10 form-color border-radius5 openS-font-family"
-                                    type="text"
-                                    name="phone"
-                                    id="inputPhone"
-                                    placeholder="Your Phone"
-                                    {...register("phone", {
-                                        required: "Phone is required",
-                                    })}
-                                />
-                                {errors.phone && (
-                                    <span className="ui-error">
-                                        {errors.phone.message}
-                                    </span>
-                                )}
-                            </div>
-
-                            <div
-                                className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 pl6 pr-12 mb-12"
-                                data-aos="fade-up"
-                                data-aos-anchor-placement="top-bottom"
-                                data-aos-duration={900}
-                            >
-                                <input
-                                    className="subject w-100 theme-border pl-20 pt-15 pb-15 pr-10 form-color border-radius5 openS-font-family"
-                                    type="text"
-                                    name="subject"
-                                    id="inputSubject"
-                                    placeholder="Your Subject"
-                                    {...register("subject", {
-                                        required: "Subject is required",
-                                    })}
-                                />
-                                {errors.subject && (
-                                    <span className="ui-error">
-                                        {errors.subject.message}
                                     </span>
                                 )}
                             </div>

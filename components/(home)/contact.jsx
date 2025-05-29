@@ -48,18 +48,18 @@ export default function Contact() {
                 <div className="container">
                     <div className="row align-items-start">
                         <div className="col-xl-12 col-lg-12  col-md-12  col-sm-12 col-12">
-                            <div className="title text-center">
+                            <div className="title text-center mb-5">
                                 <span className="theme-color text-uppercase d-block mb-6">
                                     Contact Me
                                 </span>
                                 <h2 className="text-uppercase">
-                                    Let’s Start A New Project
+                                    Let's Start A New Project
                                 </h2>
                             </div>
                         </div>
                     </div>
-                    <div className="row">
-                        <div className="col-xl-6 col-lg-5 col-md-12  col-sm-12 col-12">
+                    <div className="row justify-content-center align-items-center">
+                        <div className="col-xl-5 col-lg-5 col-md-12  col-sm-12 col-12">
                             <div className="contact-wrapper mt-70">
                                 <ul className="contact-info-content">
                                     {/* contact list start */}
@@ -91,7 +91,7 @@ export default function Contact() {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-xl-6 col-lg-7 col-md-12  col-sm-12 col-12">
+                        <div className="col-xl-5 col-lg-5 col-md-12  col-sm-12 col-12">
                             {/* contact form start */}
                             <ContactForm />
                             {/* contact form end */}

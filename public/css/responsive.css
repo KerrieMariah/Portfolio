@@ -981,6 +981,10 @@
      .d-text.d-block.d-sm-inline-block {
           display: block !important;
      }
+     .about-area {
+          margin-bottom: 0 !important;
+     }
+
 }
 
 

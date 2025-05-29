@@ -36,7 +36,7 @@ export default function MyPortfolio() {
                             <span 
                                 className="subtitle theme-color f-700 text-uppercase d-block mb-10"
                                 data-aos="fade-up"
-                                data-aos-duration={1000}
+                                data-aos-duration={6000}
                             >
                                 My Work
                             </span>
@@ -51,7 +51,7 @@ export default function MyPortfolio() {
                             <p 
                                 className="section-desc mx-auto"
                                 data-aos="fade-up"
-                                data-aos-duration={1400}
+                                data-aos-duration={600}
                                 data-aos-delay={200}
                             >
                                 A showcase of websites and applications I've built, focusing on clean design, 
@@ -67,7 +67,7 @@ export default function MyPortfolio() {
                         <div 
                             className="filter-tabs text-center mb-50"
                             data-aos="fade-up"
-                            data-aos-duration={1000}
+                            data-aos-duration={7000}
                             data-aos-delay={300}
                         >
                             <div className="portfolio-filter-container d-inline-block">
