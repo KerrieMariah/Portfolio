@@ -35,7 +35,7 @@ export default function AboutArea() {
                                                 height={600}
                                                 width={488}
                                                 className="img-grayscale border-radius12 position-relative z-index11 h-100 w-auto tilt"
-                                                src="/images/about/about-img1.png"
+                                                src="/images/about/about-section.png"
                                                 alt="person"
                                             />
                                         </Tilt>

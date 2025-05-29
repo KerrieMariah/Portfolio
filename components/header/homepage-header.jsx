@@ -64,10 +64,10 @@ export default function Header1() {
 
                                 <div className="header-btn pl-45">
                                     <Link
-                                        href="https://drive.usercontent.google.com/u/0/uc?id=1EQv2dk2yEH7S2lz8OwFkTRs1-ljoJXnw&export=download"
+                                        href="https://tidycal.com/kerriemariah"
                                         className="white-text text-uppercase d-inline-block"
                                     >
-                                        Download Cv
+                                        Schedule a Call
                                     </Link>
                                 </div>
 

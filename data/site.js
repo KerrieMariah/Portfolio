@@ -91,92 +91,59 @@ export const skills = [
 
 export const pricing = [
     {
-        time: "Hourly",
-        price: 85,
-        priceTime: "Hour",
-        description: "For ad-hoc, quick tasks and consultations.",
-        bestFor: "Small, immediate needs or short consultations.",
-        list: [
-            {
-                name: "One time contract",
-                isCheck: true,
-            },
-            {
-                name: "Pay-as-you-go",
-                isCheck: true,
-            },
-            {
-                name: "Dedicated focus on your task",
-                isCheck: true,
-            },
-            {
-                name: "Long-term support",
-                isCheck: false,
-            },
-            {
-                name: "Updates",
-                isCheck: false,
-            },
+        id: 1,
+        title: "Basic Website",
+        price: "$800",
+        duration: "Starting at",
+        features: [
+            "Custom responsive design",
+            "Up to 5 pages",
+            "Contact form integration",
+            "Basic SEO optimization",
+            "Mobile-friendly design",
+            "Unlimited revisions",
+            "30 days support"
         ],
+        popular: false,
+        ctaText: "Get Started",
+        ctaLink: "https://tidycal.com/kerriemariah"
     },
     {
-        time: "Project Basis",
-        price: 75,
-        priceTime: "Hour",
-        description: "Tailored for defined projects with specific deliverables.",
-        bestFor: "Freelancers, small business owners, or entrepreneurs needing project-specific help.",
-        list: [
-            {
-                name: "One time contract",
-                isCheck: true,
-            },
-            {
-                name: "Flexible terms",
-                isCheck: true,
-            },
-            {
-                name: "Includes source files",
-                isCheck: true,
-            },
-            {
-                name: "Dedicated support during the project",
-                isCheck: true,
-            },
-            {
-                name: "Post-completion updates",
-                isCheck: false,
-            },
+        id: 2,
+        title: "E-commerce Site",
+        price: "$1,200",
+        duration: "Starting at",
+        features: [
+            "Full e-commerce functionality",
+            "Payment gateway integration",
+            "Product catalog management",
+            "Inventory tracking",
+            "Customer accounts",
+            "Unlimited revisions",
+            "60 days support"
         ],
+        popular: true,
+        ctaText: "Schedule Call",
+        ctaLink: "https://tidycal.com/kerriemariah"
     },
     {
-        time: "Monthly",
-        price: 500,
-        priceTime: "Month",
-        description: "Ongoing support for growing businesses. Maximum 10 hours per month.",
-        bestFor: "Businesses requiring regular updates, ongoing development, or extended services.",
-        list: [
-            {
-                name: "Continuous contract",
-                isCheck: true,
-            },
-            {
-                name: "Priority availability",
-                isCheck: true,
-            },
-            {
-                name: "Includes source Files",
-                isCheck: true,
-            },
-            {
-                name: "Dedicated support",
-                isCheck: true,
-            },
-            {
-                name: "Monthly updates and optimization",
-                isCheck: true,
-            },
+        id: 3,
+        title: "Hourly Consulting",
+        price: "$75",
+        duration: "Per Hour",
+        features: [
+            "Technical consultation",
+            "Code review & optimization",
+            "Bug fixes & maintenance",
+            "Feature development",
+            "AI strategy & implementation",
+            "UX/conversion audits",
+            "Flexible scheduling"
         ],
-    },
+        popular: false,
+        ctaText: "Book Session",
+        ctaLink: "https://tidycal.com/kerriemariah"
+    }
 ];
 
 export const service = [
@@ -202,7 +169,7 @@ export const service = [
         iconUrl: "/images/work/service-icon4.png",
         title: "SEO Analysis",
         description:
-            "Boost your online visibility with data-driven SEO strategies and in-depth analysis, combining keyword optimization, competitive research, and performance tracking to elevate your brand’s reach and impact.",
+            "Boost your online visibility with data-driven SEO strategies and in-depth analysis, combining keyword optimization, competitive research, and performance tracking to elevate your brand's reach and impact.",
     },
 ];
 
@@ -246,7 +213,7 @@ export const experience2 = [
     {
         icon: "flaticon-briefcase",
         title: "Founder and Technical Consultant",
-        company: "Byte Breakdown, LLC",
+        company: "Kerrie Mariah & Associates, LLC",
         date: {
             start: 2022,
             end: "Present",
@@ -298,13 +265,13 @@ export const awardInfo = [
             "Hands-on experience with fundamental data structures and object-oriented design principles.",
     },
     {
-        logoUrl: "/images/award/award-logo3.png",
-        title: "Reduced Costs",
+        logoUrl: "/images/award/rxjava.png",
+        title: "RxJava Reactive Programming",
         year: 2019,
-        association: "Elite Mortgage Source",
-        location: "Cape Coral, FL",
+        association: "Oracle/ReactiveX",
+        location: "Online Certification",
         description:
-            "Client was paying over $2,000 a month for a non-functioning website. I was able to rebuild his website without broken links and reduce his payments to $15 a month.",
+            "Advanced certification in reactive programming with RxJava, covering asynchronous data streams, operators, schedulers, and reactive design patterns for building scalable, responsive applications.",
     },
 ];
 

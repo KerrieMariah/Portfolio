@@ -254,9 +254,9 @@
           padding-top: 118px;
           padding-bottom: 80px;
      }
-     .footer-area {
+     /* .footer-area {
           margin-bottom: 40px;
-     }
+     } */
      .education-wrapper {
           margin-right: 0;
      }
@@ -443,7 +443,7 @@
      }
      .footer-area {
           padding-top: 102px;
-          margin-bottom: 45px;
+          /* margin-bottom: 45px; */
      }
      .portfolio-wrapper .title {
           margin-bottom: 40px;
@@ -861,7 +861,7 @@
      }
      .footer-area {
           padding-top: 102px;
-          margin-bottom: 45px;
+          /* margin-bottom: 45px; */
      }
      .portfolio-wrapper .title {
           margin-bottom: 40px;

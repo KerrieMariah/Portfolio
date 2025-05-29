@@ -9,11 +9,11 @@ import WorkModal from "./ui/work-modal";
 const btns = [
     {
         filter: "*",
-        name: "All",
+        name: "All Work",
     },
     {
         filter: ".design",
-        name: "Web Design",
+        name: "Design",
     },
     {
         filter: ".dev",
@@ -27,6 +27,7 @@ const btns = [
 
 export default function Works() {
     const [getActive, setActive] = useState(0);
+    const [isLoading, setIsLoading] = useState(true);
 
     const isotope = useRef(null);
     const grid = useRef(null);
@@ -42,10 +43,12 @@ export default function Works() {
                 percentPosition: true,
                 masonry: {
                     columnWidth: ".grid-item",
-                }
+                    gutter: 30
+                },
+                transitionDuration: '0.6s'
             });
-            // Force a layout update
             isotope.current.layout();
+            setIsLoading(false);
         };
 
         // Track each image load
@@ -75,61 +78,63 @@ export default function Works() {
         };
     }, []);
 
+    const handleFilter = (filterValue, index) => {
+        setActive(index);
+        if (isotope.current) {
+            isotope.current.arrange({ filter: filterValue });
+        }
+    };
+
     return (
         <>
-            <div
-                id="works"
-                className="portfolio-area over-hidden pt-155 pb-140"
-            >
-                <div className="portfolio-wrapper position-relative">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-xl-12 col-lg-12  col-md-12  col-sm-12 col-12">
-                                <div className="title text-center mb-65">
-                                    <span className="theme-color f-700 text-uppercase d-block mb-6">
-                                        Portfolio
-                                    </span>
-                                    <h2 className=" text-uppercase">
-                                        My Works
-                                    </h2>
-                                </div>
+            <div id="works" className="portfolio-area pt-120 pb-120">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="section-header text-center mb-50">
+                                <span className="subtitle mb-2">My Work</span>
+                                <h2 className="section-title mb-3">Recent Projects</h2>
+                                <p className="section-desc">
+                                    Here are some projects I've worked on recently
+                                </p>
                             </div>
-                        </div>
-
-                        <div className="row">
-                            <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 text-center">
-                                <div className="port-button mb-50 portfolio-menu">
-                                    {/* filter btn start */}
-                                    {btns?.map((item, i) => (
-                                        <button
-                                            key={i}
-                                            data-filter={item.filter}
-                                            className={
-                                                getActive === i ? "active" : ""
-                                            }
-                                            onClick={() => setActive(i)}
-                                        >
-                                            {item.name}
-                                        </button>
-                                    ))}
-                                    {/* filter btn end */}
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row portfolio grid" ref={grid}>
-                            {/* works card start */}
-                            {works?.map((item, i) => (
-                                <WorkCard key={i} data={item} />
-                            ))}
-                            {/* works card end */}
                         </div>
                     </div>
+
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="filter-tabs text-center mb-40">
+                                {btns?.map((item, i) => (
+                                    <button
+                                        key={i}
+                                        data-filter={item.filter}
+                                        className={`filter-btn ${
+                                            getActive === i ? "active" : ""
+                                        }`}
+                                        onClick={() => handleFilter(item.filter, i)}
+                                    >
+                                        {item.name}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* <div className="row portfolio-grid" ref={grid}>
+                        {isLoading && (
+                            <div className="portfolio-loading text-center py-5">
+                                <div className="loading-spinner"></div>
+                                <p className="mt-3">Loading portfolio...</p>
+                            </div>
+                        )}
+                        {works?.map((item, i) => (
+                            <WorkCard key={i} data={item} />
+                        ))}
+                    </div> */}
                 </div>
             </div>
 
-            {/* work modal start */}
             <WorkModal />
-            {/* work modal end */}
         </>
     );
 }

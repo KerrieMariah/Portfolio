@@ -41,7 +41,7 @@ export default function FunFact() {
                         <div className="single-fact d-block d-lg-flex align-items-center text-center text-lg-left mb-30">
                             <div className="mr-25 d-flex align-content-start justify-content-center">
                                 <span className="theme-color f-700 d-inline-block counter">
-                                    <CountUp end={250} enableScrollSpy={true} />
+                                    <CountUp end={150} enableScrollSpy={true} />
                                 </span>
                                 <span className="theme-color f-700 d-inline-block pr-1">
                                     

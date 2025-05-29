@@ -1,7 +1,8 @@
 "use client";
 import { TypeAnimation } from "react-type-animation";
 import Image from "next/image";
-import Link from "next/link";
+import NextLink from "next/link";
+import { Link } from "react-scroll";
 
 const socialLinks = [
     {
@@ -34,7 +35,7 @@ export default function Hero() {
                                         data-aos-delay={800}
                                     >
                                         <span className="sub-heading d-block theme-color mb-10">
-                                            Hello I’m
+                                            Hello I'm
                                         </span>
                                         Kerrie Mariah
                                     </h1>
@@ -63,10 +64,13 @@ export default function Hero() {
                                         </span>
                                     </h2>
                                     <Link
-                                        href="/"
+                                        to="contact"
+                                        spy={true}
+                                        smooth={true}
+                                        offset={-85}
+                                        duration={500}
                                         className="btn position-relative over-hidden theme-bg text-white text-uppercase mt-40"
                                         data-aos="fade-up"
-                                        data-aos-duration={1000}
                                     >
                                         Say Hello
                                     </Link>
@@ -93,12 +97,12 @@ export default function Hero() {
                         {/* social links start */}
                         {socialLinks?.map((item, i) => (
                             <li key={i} className="mt-10 mb-10 rotate-hover">
-                                <Link
+                                <NextLink
                                     className="text-white text-center d-inline-block rotate"
                                     href={item.link}
                                 >
                                     <i className={item.icon} />
-                                </Link>
+                                </NextLink>
                             </li>
                         ))}
                         {/* social links end */}

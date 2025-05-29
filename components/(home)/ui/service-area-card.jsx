@@ -7,7 +7,7 @@ export default function ServiceAreaCard({ data, index }) {
             className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12"
             data-aos="fade-up"
             data-aos-anchor-placement="top-bottom"
-            data-aos-duration={first2 ? 1000 : 1200}
+            data-aos-duration={first2 ? 700 : 800}
             data-aos-delay={500}
         >
             <div className="single-service shadow-hover transition3 white-bg border-radius12 pl-50 pr-50 pt-65 pb-55 mb-25">

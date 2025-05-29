@@ -13,7 +13,7 @@ const contact = [
     {
         icon: "fas fa-envelope",
         title: "Email",
-        text: "kerriemariah@gmail.com",
+        text: "kerrie@kerriemariah.com",
     },
     {
         icon: "fab fa-whatsapp",

@@ -42,7 +42,7 @@ export default function ContactForm() {
                                 className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 pr6 mb-12"
                                 data-aos="fade-up"
                                 data-aos-anchor-placement="top-bottom"
-                                data-aos-duration={2000}
+                                data-aos-duration={800}
                             >
                                 <input
                                     className="name w-100 theme-border pl-20 pt-15 pb-15 pr-10 form-color border-radius5 openS-font-family"
@@ -65,7 +65,7 @@ export default function ContactForm() {
                                 className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 pl6 pr-12 mb-12"
                                 data-aos="fade-up"
                                 data-aos-anchor-placement="top-bottom"
-                                data-aos-duration={2500}
+                                data-aos-duration={900}
                             >
                                 <input
                                     className="email w-100 theme-border pl-20 pt-15 pb-15 pr-10 form-color border-radius5 openS-font-family"
@@ -95,7 +95,7 @@ export default function ContactForm() {
                                 className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 pr6 mb-12"
                                 data-aos="fade-up"
                                 data-aos-anchor-placement="top-bottom"
-                                data-aos-duration={2000}
+                                data-aos-duration={800}
                             >
                                 <input
                                     className="phone w-100 theme-border pl-20 pt-15 pb-15 pr-10 form-color border-radius5 openS-font-family"
@@ -118,7 +118,7 @@ export default function ContactForm() {
                                 className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 pl6 pr-12 mb-12"
                                 data-aos="fade-up"
                                 data-aos-anchor-placement="top-bottom"
-                                data-aos-duration={2500}
+                                data-aos-duration={900}
                             >
                                 <input
                                     className="subject w-100 theme-border pl-20 pt-15 pb-15 pr-10 form-color border-radius5 openS-font-family"
@@ -143,7 +143,7 @@ export default function ContactForm() {
                                 className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 pl-12 pr-12 mb-12"
                                 data-aos="fade-up"
                                 data-aos-anchor-placement="top-bottom"
-                                data-aos-duration={2000}
+                                data-aos-duration={800}
                             >
                                 <textarea
                                     className="massage w-100 theme-border pl-20 pt-15 pr-10 primary-color border-radius5 openS-font-family"
@@ -172,7 +172,7 @@ export default function ContactForm() {
                             name="submit"
                             data-aos="fade-up"
                             data-aos-anchor-placement="top-bottom"
-                            data-aos-duration={2500}
+                            data-aos-duration={900}
                         >
                             Submit Now
                         </button>

@@ -9,21 +9,21 @@ const social = [
         link: "https://www.facebook.com/kerrie.x.mariah/",
     },
     {
-        icon: "fab fa-linkedin-in",
-        color: "linkedin-bg",
-        link: "https://www.linkedin.com/in/kerriemariah/",
-    },
-    {
         icon: "fab fa-instagram",
         color: "instagram-bg",
         link: "https://www.instagram.com/kerrie_mariah/",
+    },
+    {
+        icon: "fab fa-linkedin-in",
+        color: "linkedin-bg",
+        link: "https://www.linkedin.com/in/kerriemariah/",
     },
 ];
 
 export default function Footer() {
     return (
         <footer>
-            <div className="footer-area over-hidden pt-110 mb-80">
+            <div className="footer-area over-hidden pt-110">
                 <div className="footer-top">
                     <div className="container">
                         <div className="row">
@@ -32,8 +32,8 @@ export default function Footer() {
                                     <div className="foot-logo mb-30">
                                         <Image
                                             height={36}
-                                            width={160}
-                                            src="/images/logo/black-logo.png"
+                                            width={200}
+                                            src="/images/logo/logo.png"
                                             alt="Themes"
                                         />
                                     </div>

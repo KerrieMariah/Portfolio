@@ -58,7 +58,7 @@ export default function SidebarNavigation() {
                                     to={item.path}
                                     spy={true}
                                     smooth={true}
-                                    offset={-70}
+                                    offset={-75}
                                     duration={500}
                                     activeClass="ui-sidebar-active"
                                 />

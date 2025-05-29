@@ -9,9 +9,21 @@ export default function Pricing() {
                     <div className="col-xl-12 col-lg-12  col-md-12  col-sm-12 col-12">
                         <div className="title text-center">
                             <span className="theme-color text-uppercase d-block mb-6">
-                                Let’s Start Working
+                                Let's Start Working
                             </span>
                             <h2 className="text-uppercase">Pricing Plans</h2>
+                            <p className="mt-20 mb-0">
+                                Website pricing varies based on features and individual client needs. 
+                                <br />
+                                <a 
+                                    href="https://tidycal.com/kerriemariah" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="theme-color font-weight-bold"
+                                >
+                                    Book a 15-minute call
+                                </a> to discuss your specific project requirements.
+                            </p>
                         </div>
                     </div>
                 </div>

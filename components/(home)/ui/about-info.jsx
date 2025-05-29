@@ -14,10 +14,10 @@ export default function AboutInfo() {
                 </div>
             </div>
             <p className="mb-25">
-            Bridging the ever-changing world of technology with clear, effective communication, I offer a unique blend of technical expertise and human connection. 
+            I build websites and applications that solve real business problems. With a focus on clean code and user experience, I turn complex technical challenges into simple, effective solutions.
             </p>
             <p>
-            Whether it's translating complex systems into actionable strategies or delivering innovative solutions, I help businesses thrive in a tech-driven landscape with clarity and confidence.
+            From concept to deployment, I work closely with clients to create digital experiences that not only look great but drive results and grow their business.
             </p>
             <div className="about-info-wrapper pt-10">
                 <div className="row">
@@ -26,16 +26,12 @@ export default function AboutInfo() {
                             <li className="d-inline-block pr-45">
                                 <p className="primary-color f-700 mb-6">Name</p>
                                 <p className="primary-color f-700 mb-6">
-                                    Occupation
-                                </p>
-                                <p className="primary-color f-700 mb-6">
-                                    Education
+                                    Nationality
                                 </p>
                             </li>
                             <li className="d-inline-block">
                                 <p className="mb-6">Kerrie Mariah</p>
-                                <p className="mb-6">Software Engineer</p>
-                                <p className="mb-6">Two Bachelors</p>
+                                <p className="mb-6">United States</p>
                             </li>
                         </ul>
                     </div>
@@ -48,14 +44,10 @@ export default function AboutInfo() {
                                 <p className="primary-color f-700 mb-6">
                                     Email
                                 </p>
-                                <p className="primary-color f-700 mb-6">
-                                    Nationality
-                                </p>
                             </li>
                             <li className="d-inline-block">
                                 <p className="mb-6">+1(352) 316-7889</p>
                                 <p className="mb-6"><a href="mailto:kerriemariah@gmail.com">Email Me</a></p>
-                                <p className="mb-6">United States</p>
                             </li>
                         </ul>
                     </div>
@@ -76,11 +68,24 @@ export default function AboutInfo() {
                         Kerrie Mariah
                     </h6>
                     <span className=" secondary-color2">
-                        Software Engineer, Byte Breakdown llc.
+                        Software Engineer, Kerrie Mariah & Associates llc
                     </span>
                 </div>
             </div>
             {/* /about-footer-content */}
+            
+            {/* Personal Website Link */}
+            <div className="personal-site-link mt-30 text-center">
+                <a 
+                    href="https://the-traveling-coder.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="personal-site-btn"
+                >
+                    <i className="fas fa-globe mr-10"></i>
+                    Read About My Adventures
+                </a>
+            </div>
         </div>
     );
 }

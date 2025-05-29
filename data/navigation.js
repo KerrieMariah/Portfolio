@@ -8,19 +8,19 @@ export default [
         path: "about",
     },
     {
-        name: "Works",
-        path: "works",
+        name: "Portfolio",
+        path: "portfolio",
     },
     {
-        name: "Service",
+        name: "Services",
         path: "service",
     },
     {
         name: "Contact",
         path: "contact",
     },
-    {
-        name: "Blog",
-        path: "blog",
-    },
+    // {
+    //     name: "Blog",
+    //     path: "blog",
+    // },
 ];
