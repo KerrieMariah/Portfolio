@@ -871,11 +871,11 @@ footer .social li a:hover {
         width: 100% !important;
         height: 100% !important;
         object-fit: cover;
-        object-position: bottom center;
+        object-position: left center;
         transform: none;
     }
     
-    /* Ensure content text is above the background image and centered */
+    /* Ensure content text is above the background image and cenetred */
     .slider-content {
         position: relative;
         z-index: 10;
@@ -1066,11 +1066,11 @@ footer .social li a:hover {
 
 @media (max-width: 991.98px) {
     .fun-fact-area h3 {
-        font-size: 20px !important;
+        font-size: 15px !important;
     }
     
     .fun-fact-area .per {
-        font-size: 44px !important;
+        font-size: 32px !important;
     }
 
 }
