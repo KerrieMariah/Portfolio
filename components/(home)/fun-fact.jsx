@@ -5,7 +5,7 @@ export default function FunFact() {
         <div
             className="fun-fact-area fun-fact-bg over-hidden pt-105 pb-80"
             data-aos="fade-up"
-            data-aos-duration={1800}
+            data-aos-duration={500}
         >
             <div className="container">
                 <div className="row justify-content-center align-items-center">
