@@ -78,7 +78,7 @@ export default function Links() {
                         </div>
                         <h1 className="profile-title">Kerrie Mariah</h1>
                         <p className="profile-subtitle">Software Engineer & Digital Nomad</p>
-                        <p className="profile-tagline">Hand-coded by yours truly. I can create one for you too — just ask!</p>
+                        <p className="profile-tagline">This page hand-coded by yours truly. I can create one for you too — just ask!</p>
                         <div className="profile-sparkles">
                             <span className="sparkle">🌿</span>
                             <span className="sparkle">🍃</span>
