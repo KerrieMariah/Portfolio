@@ -12,6 +12,7 @@
     "@reduxjs/toolkit": "^2.2.5",
     "aos": "^2.3.4",
     "bootstrap": "^4.0.0",
+    "framer-motion": "^12.18.1",
     "imagesloaded": "^5.0.0",
     "isotope-layout": "^3.0.6",
     "leaflet": "^1.9.4",
