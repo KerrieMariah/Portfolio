@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 
 export default function Links() {
@@ -9,7 +9,6 @@ export default function Links() {
     const [debugInfo, setDebugInfo] = useState({
         hydrationTime: null,
         mountTime: null,
-        renderCount: 0,
         windowWidth: null,
         userAgent: null,
         animationStates: []
@@ -54,12 +53,9 @@ export default function Links() {
         }
     }, []);
 
-    useEffect(() => {
-        setDebugInfo(prev => ({
-            ...prev,
-            renderCount: prev.renderCount + 1
-        }));
-    });
+    // Track renders without causing infinite loop
+    const renderCountRef = useRef(0);
+    renderCountRef.current += 1;
 
     const links = [
         {
@@ -120,7 +116,7 @@ export default function Links() {
             <div className="debug-panel">
                 <h4>🐛 Debug Info</h4>
                 <div>Mounted: {mounted ? '✅' : '❌'}</div>
-                <div>Renders: {debugInfo.renderCount}</div>
+                <div>Renders: {renderCountRef.current}</div>
                 <div>Width: {debugInfo.windowWidth}px</div>
                 <div>Hydration: {debugInfo.hydrationTime ? `${debugInfo.hydrationTime.toFixed(2)}ms` : 'N/A'}</div>
                 <div>Mount: {debugInfo.mountTime ? `${debugInfo.mountTime.toFixed(2)}ms` : 'N/A'}</div>
