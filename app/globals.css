@@ -1211,6 +1211,14 @@ footer .social li a:hover {
     width: 100%;
     max-width: 480px;
     text-align: center;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.links-content:not(.mounted) {
+    opacity: 0.8;
+    transform: translateY(15px);
 }
 
 /* Profile Section */
@@ -1715,6 +1723,54 @@ footer .social li a:hover {
     
     .link-card:hover .link-arrow {
         transform: none;
+    }
+}
+
+/* Reduce motion for mobile devices to prevent flickering - ONLY for Framer Motion elements */
+@media (max-width: 768px) {
+    /* Target only the link cards and profile section for faster animations */
+    .link-card {
+        transition-duration: 0.2s !important;
+    }
+    
+    .profile-section {
+        transition-duration: 0.2s !important;
+    }
+    
+    /* Keep background animations and sparkles at normal speed */
+    .floating-shape {
+        animation-duration: 6s !important;
+    }
+    
+    .sparkle {
+        animation-duration: 2s !important;
+    }
+    
+    .profile-ring {
+        animation-duration: 15s !important;
+    }
+}
+
+/* Prefer reduced motion for users who have set this preference */
+@media (prefers-reduced-motion: reduce) {
+    .links-content,
+    .links-content * {
+        animation-duration: 0.3s !important;
+        transition-duration: 0.3s !important;
+        animation-iteration-count: 1 !important;
+    }
+    
+    /* But still preserve some background motion */
+    .floating-shape {
+        animation-duration: 8s !important;
+    }
+    
+    .sparkle {
+        animation-duration: 3s !important;
+    }
+    
+    .profile-ring {
+        animation-duration: 20s !important;
     }
 }
 

@@ -8,9 +8,7 @@ export default function Links() {
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
-        // Use a shorter delay to reduce flickering
-        const timer = setTimeout(() => setMounted(true), 100);
-        return () => clearTimeout(timer);
+        setMounted(true);
     }, []);
 
     const links = [
@@ -98,56 +96,7 @@ export default function Links() {
         }
     };
 
-    if (!mounted) {
-        return (
-            <div className="links-page">
-                <div className="links-bg">
-                    <div className="floating-shapes">
-                        {[...Array(6)].map((_, i) => (
-                            <div 
-                                key={i} 
-                                className={`floating-shape shape-${i + 1}`}
-                            />
-                        ))}
-                    </div>
-                </div>
-                <div className="links-container">
-                    <div className="links-content" style={{ opacity: 0.3 }}>
-                        <div className="profile-section">
-                            <div className="profile-image">
-                                <div className="profile-ring"></div>
-                                <div className="profile-avatar">
-                                    <img src="/images/links/prof.JPEG" alt="Kerrie Mariah" />
-                                </div>
-                            </div>
-                            <h1 className="profile-title">Kerrie Mariah</h1>
-                            <p className="profile-subtitle">Software Engineer & Digital Nomad</p>
-                            <p className="profile-tagline">Hand-coded by yours truly. I can create one for you too — just ask!</p>
-                            <div className="profile-sparkles">
-                                <span className="sparkle">🌿</span>
-                                <span className="sparkle">🍃</span>
-                                <span className="sparkle">🌱</span>
-                            </div>
-                        </div>
-                        <div className="links-grid">
-                            {links.map((link, index) => (
-                                <div key={index} className="link-card">
-                                    <div className="link-content">
-                                        <div className="link-icon">{link.icon}</div>
-                                        <div className="link-text">
-                                            <h3 className="link-title">{link.title}</h3>
-                                            <p className="link-description">{link.description}</p>
-                                        </div>
-                                        <div className="link-arrow">→</div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+
 
     return (
         <div className="links-page">
@@ -165,10 +114,10 @@ export default function Links() {
 
             <div className="links-container">
                 <motion.div
-                    className="links-content"
+                    className={`links-content ${mounted ? 'mounted' : ''}`}
                     variants={containerVariants}
                     initial="hidden"
-                    animate="visible"
+                    animate={mounted ? "visible" : "hidden"}
                 >
                     {/* Profile Section */}
                     <motion.div
