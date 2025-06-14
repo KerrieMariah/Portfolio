@@ -1207,19 +1207,63 @@ footer .social li a:hover {
     z-index: 2;
 }
 
+/* Clean, reliable animation system */
 .links-content {
     width: 100%;
     max-width: 480px;
     text-align: center;
-    animation: fadeInUp 0.6s ease-out forwards;
 }
 
-.links-content:not(.mounted) {
+.links-content.loading {
     opacity: 0;
-    transform: translateY(20px);
 }
 
-@keyframes fadeInUp {
+.links-content.loaded {
+    opacity: 1;
+    animation: contentFadeIn 0.8s ease-out;
+}
+
+.links-content.loaded .profile-section {
+    animation: profileGrow 0.8s ease-out both;
+}
+
+.links-content.loaded .link-card-1 { animation: cardSlideIn 0.6s ease-out 0.2s both; }
+.links-content.loaded .link-card-2 { animation: cardSlideIn 0.6s ease-out 0.3s both; }
+.links-content.loaded .link-card-3 { animation: cardSlideIn 0.6s ease-out 0.4s both; }
+.links-content.loaded .link-card-4 { animation: cardSlideIn 0.6s ease-out 0.5s both; }
+
+.links-content.loaded .links-footer {
+    animation: footerFadeIn 0.6s ease-out 0.6s both;
+}
+
+@keyframes contentFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes profileGrow {
+    from { 
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes cardSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes footerFadeIn {
     from {
         opacity: 0;
         transform: translateY(20px);
@@ -1230,34 +1274,12 @@ footer .social li a:hover {
     }
 }
 
-/* Staggered animation for link cards */
-.link-card:nth-child(1) { animation-delay: 0.1s; }
-.link-card:nth-child(2) { animation-delay: 0.2s; }
-.link-card:nth-child(3) { animation-delay: 0.3s; }
-.link-card:nth-child(4) { animation-delay: 0.4s; }
-
-/* Profile section animation */
-.profile-section {
-    opacity: 0;
-    transform: scale(0.9);
-    animation: fadeInScale 0.6s ease-out forwards;
-}
-
-@keyframes fadeInScale {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
 /* Profile Section */
 .profile-section {
     margin-bottom: 1.5rem;
     position: relative;
+    opacity: 0;
+    transform: scale(0.9);
 }
 
 .profile-image {
@@ -1394,8 +1416,7 @@ footer .social li a:hover {
     background: rgba(255, 253, 240, 0.9);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.5s ease-out forwards;
+    transform: translateY(30px) scale(0.95);
 }
 
 .link-card::before {
@@ -1522,6 +1543,8 @@ footer .social li a:hover {
     color: rgba(255, 255, 255, 0.9);
     font-size: 0.9rem;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transform: translateY(20px);
 }
 
 .links-footer p {
@@ -1763,28 +1786,23 @@ footer .social li a:hover {
 
 /* Faster animations on mobile for better performance */
 @media (max-width: 768px) {
-    .links-content,
-    .link-card,
-    .profile-section {
-        animation-duration: 0.3s !important;
+    .links-content.loaded .link-card-1 { animation: cardSlideIn 0.4s ease-out 0.1s both; }
+    .links-content.loaded .link-card-2 { animation: cardSlideIn 0.4s ease-out 0.15s both; }
+    .links-content.loaded .link-card-3 { animation: cardSlideIn 0.4s ease-out 0.2s both; }
+    .links-content.loaded .link-card-4 { animation: cardSlideIn 0.4s ease-out 0.25s both; }
+    
+    .links-content.loaded .profile-section {
+        animation: profileGrow 0.6s ease-out both;
     }
     
-    .link-card:nth-child(1) { animation-delay: 0.05s; }
-    .link-card:nth-child(2) { animation-delay: 0.1s; }
-    .link-card:nth-child(3) { animation-delay: 0.15s; }
-    .link-card:nth-child(4) { animation-delay: 0.2s; }
+    .links-content.loaded .links-footer {
+        animation: footerFadeIn 0.4s ease-out 0.3s both;
+    }
 }
 
 /* Prefer reduced motion for users who have set this preference */
 @media (prefers-reduced-motion: reduce) {
-    .links-content,
-    .links-content * {
-        animation-duration: 0.3s !important;
-        transition-duration: 0.3s !important;
-        animation-iteration-count: 1 !important;
-    }
-    
-    /* But still preserve some background motion */
+    /* Only reduce decorative animations, not entrance animations */
     .floating-shape {
         animation-duration: 8s !important;
     }
@@ -1795,6 +1813,22 @@ footer .social li a:hover {
     
     .profile-ring {
         animation-duration: 20s !important;
+    }
+    
+    /* Keep entrance animations but make them faster */
+    .links-content.loaded .profile-section {
+        animation-duration: 0.4s !important;
+    }
+    
+    .links-content.loaded .link-card-1,
+    .links-content.loaded .link-card-2,
+    .links-content.loaded .link-card-3,
+    .links-content.loaded .link-card-4 {
+        animation-duration: 0.3s !important;
+    }
+    
+    .links-content.loaded .links-footer {
+        animation-duration: 0.3s !important;
     }
 }
 
