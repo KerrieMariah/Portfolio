@@ -1289,8 +1289,20 @@ footer .social li a:hover {
 .profile-subtitle {
     font-size: 1.1rem;
     color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     font-weight: 300;
+}
+
+.profile-tagline {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.4;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .profile-sparkles {
@@ -1521,6 +1533,11 @@ footer .social li a:hover {
         font-size: 1rem;
     }
     
+    .profile-tagline {
+        font-size: 0.85rem;
+        margin-bottom: 1.25rem;
+    }
+    
     .link-content {
         padding: 1.25rem;
     }
@@ -1588,6 +1605,12 @@ footer .social li a:hover {
     .profile-subtitle {
         font-size: 0.9rem;
         margin-bottom: 0.75rem;
+    }
+    
+    .profile-tagline {
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+        max-width: 300px;
     }
     
     .link-content {

@@ -126,11 +126,12 @@ export default function Links() {
                         <div className="profile-image">
                             <div className="profile-ring"></div>
                             <div className="profile-avatar">
-                                <img src="/images/links/prof.jpeg" alt="Kerrie Mariah" />
+                                <img src="/images/links/prof.JPEG" alt="Kerrie Mariah" />
                             </div>
                         </div>
                         <h1 className="profile-title">Kerrie Mariah</h1>
                         <p className="profile-subtitle">Software Engineer & Digital Nomad</p>
+                        <p className="profile-tagline">Hand-coded by yours truly. I can create one for you too — just ask!</p>
                         <div className="profile-sparkles">
                             <span className="sparkle">🌿</span>
                             <span className="sparkle">🍃</span>
@@ -175,8 +176,8 @@ export default function Links() {
                         <p>Made with 💚 and lots of ☕</p>
                         <div className="social-links">
                             <a href="https://www.linkedin.com/in/kerriemariah" aria-label="LinkedIn">💼</a>
-                            <a href="#" aria-label="GitHub">🐱</a>
-                            <a href="#" aria-label="Instagram">📸</a>
+                            <a href="https://github.com/KerrieMariah" aria-label="GitHub">🐱</a>
+                            <a href="https://www.instagram.com/kerrie_mariah" aria-label="Instagram">📸</a>
                         </div>
                     </motion.div>
                 </motion.div>
