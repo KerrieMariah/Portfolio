@@ -8,7 +8,9 @@ export default function Links() {
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
-        setMounted(true);
+        // Use a shorter delay to reduce flickering
+        const timer = setTimeout(() => setMounted(true), 100);
+        return () => clearTimeout(timer);
     }, []);
 
     const links = [
@@ -51,8 +53,9 @@ export default function Links() {
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.2,
-                duration: 0.5
+                staggerChildren: 0.15,
+                duration: 0.3,
+                ease: "easeOut"
             }
         }
     };
@@ -60,8 +63,8 @@ export default function Links() {
     const itemVariants = {
         hidden: { 
             opacity: 0, 
-            y: 50,
-            scale: 0.9
+            y: 30,
+            scale: 0.95
         },
         visible: {
             opacity: 1,
@@ -69,9 +72,9 @@ export default function Links() {
             scale: 1,
             transition: {
                 type: "spring",
-                stiffness: 100,
-                damping: 12,
-                duration: 0.6
+                stiffness: 120,
+                damping: 15,
+                duration: 0.4
             }
         }
     };
@@ -95,7 +98,56 @@ export default function Links() {
         }
     };
 
-    if (!mounted) return null;
+    if (!mounted) {
+        return (
+            <div className="links-page">
+                <div className="links-bg">
+                    <div className="floating-shapes">
+                        {[...Array(6)].map((_, i) => (
+                            <div 
+                                key={i} 
+                                className={`floating-shape shape-${i + 1}`}
+                            />
+                        ))}
+                    </div>
+                </div>
+                <div className="links-container">
+                    <div className="links-content" style={{ opacity: 0.3 }}>
+                        <div className="profile-section">
+                            <div className="profile-image">
+                                <div className="profile-ring"></div>
+                                <div className="profile-avatar">
+                                    <img src="/images/links/prof.JPEG" alt="Kerrie Mariah" />
+                                </div>
+                            </div>
+                            <h1 className="profile-title">Kerrie Mariah</h1>
+                            <p className="profile-subtitle">Software Engineer & Digital Nomad</p>
+                            <p className="profile-tagline">Hand-coded by yours truly. I can create one for you too — just ask!</p>
+                            <div className="profile-sparkles">
+                                <span className="sparkle">🌿</span>
+                                <span className="sparkle">🍃</span>
+                                <span className="sparkle">🌱</span>
+                            </div>
+                        </div>
+                        <div className="links-grid">
+                            {links.map((link, index) => (
+                                <div key={index} className="link-card">
+                                    <div className="link-content">
+                                        <div className="link-icon">{link.icon}</div>
+                                        <div className="link-text">
+                                            <h3 className="link-title">{link.title}</h3>
+                                            <p className="link-description">{link.description}</p>
+                                        </div>
+                                        <div className="link-arrow">→</div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div className="links-page">

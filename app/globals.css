@@ -1589,8 +1589,11 @@ footer .social li a:hover {
     }
     
     .profile-ring {
-        top: -8px;
-        left: -8px;
+        width: 100px;
+        height: 100px;
+        top: -10px;
+        left: -10px;
+        border-width: 2px;
     }
     
     .profile-avatar {
