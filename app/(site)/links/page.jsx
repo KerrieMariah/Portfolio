@@ -14,7 +14,7 @@ export default function Links() {
     const links = [
         {
             title: "The Traveling Coder",
-            description: "My travel & tech blog adventures",
+            description: "Read about my experiments, travel, and tech",
             url: "https://the-traveling-coder.com",
             icon: "✈️",
             gradient: "blue-purple",
@@ -22,7 +22,7 @@ export default function Links() {
         },
         {
             title: "Portfolio",
-            description: "Check out my work & projects",
+            description: "Check out my work & portfolio",
             url: "https://kerriemariah.com",
             icon: "💼",
             gradient: "pink-rose",
@@ -31,15 +31,15 @@ export default function Links() {
         {
             title: "Book a Call",
             description: "Let's chat about your next project",
-            url: "#", // Replace with actual tidycal link
+            url: "https://tidycal.com/kerriemariah/15-minute-meeting",
             icon: "📞",
             gradient: "green-emerald",
             hoverGradient: "green-emerald-hover"
         },
         {
-            title: "Buy Me a Bubble Tea",
-            description: "Fuel my coding adventures! 🧋",
-            url: "#", // Replace with actual coffee/donation link
+            title: "Buy Me a Coffee",
+            description: "Like my content? Every penny counts to keep me fed 😭",
+            url: "/donate",
             icon: "🧋",
             gradient: "amber-orange",
             hoverGradient: "amber-orange-hover"
@@ -125,14 +125,16 @@ export default function Links() {
                     >
                         <div className="profile-image">
                             <div className="profile-ring"></div>
-                            <div className="profile-avatar">KM</div>
+                            <div className="profile-avatar">
+                                <img src="/images/links/prof.jpeg" alt="Kerrie Mariah" />
+                            </div>
                         </div>
                         <h1 className="profile-title">Kerrie Mariah</h1>
                         <p className="profile-subtitle">Software Engineer & Digital Nomad</p>
                         <div className="profile-sparkles">
-                            <span className="sparkle">✨</span>
-                            <span className="sparkle">💫</span>
-                            <span className="sparkle">⭐</span>
+                            <span className="sparkle">🌿</span>
+                            <span className="sparkle">🍃</span>
+                            <span className="sparkle">🌱</span>
                         </div>
                     </motion.div>
 
@@ -170,10 +172,9 @@ export default function Links() {
                         className="links-footer"
                         variants={itemVariants}
                     >
-                        <p>Made with 💜 and lots of ☕</p>
+                        <p>Made with 💚 and lots of ☕</p>
                         <div className="social-links">
-                            <a href="#" aria-label="Twitter">🐦</a>
-                            <a href="#" aria-label="LinkedIn">💼</a>
+                            <a href="https://www.linkedin.com/in/kerriemariah" aria-label="LinkedIn">💼</a>
                             <a href="#" aria-label="GitHub">🐱</a>
                             <a href="#" aria-label="Instagram">📸</a>
                         </div>
