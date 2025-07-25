@@ -16,7 +16,7 @@ export default function Pricing() {
                                 Website pricing varies based on features and individual client needs. 
                                 <br />
                                 <a 
-                                    href="https://tidycal.com/kerriemariah" 
+                                    href="https://tidycal.com/kerriemariah/15-minute-meeting" 
                                     target="_blank" 
                                     rel="noopener noreferrer"
                                     className="theme-color font-weight-bold"

@@ -106,7 +106,7 @@ export const pricing = [
         ],
         popular: false,
         ctaText: "Get Started",
-        ctaLink: "https://tidycal.com/kerriemariah"
+        ctaLink: "https://tidycal.com/kerriemariah/15-minute-meeting"
     },
     {
         id: 2,
@@ -124,7 +124,7 @@ export const pricing = [
         ],
         popular: true,
         ctaText: "Schedule Call",
-        ctaLink: "https://tidycal.com/kerriemariah"
+        ctaLink: "https://tidycal.com/kerriemariah/15-minute-meeting"
     },
     {
         id: 3,
@@ -142,7 +142,7 @@ export const pricing = [
         ],
         popular: false,
         ctaText: "Book Session",
-        ctaLink: "https://tidycal.com/kerriemariah"
+        ctaLink: "https://tidycal.com/kerriemariah/15-minute-meeting"
     }
 ];
 

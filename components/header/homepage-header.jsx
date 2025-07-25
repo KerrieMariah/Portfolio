@@ -64,7 +64,7 @@ export default function Header1() {
 
                                 <div className="header-btn pl-45">
                                     <Link
-                                        href="https://tidycal.com/kerriemariah"
+                                        href="https://tidycal.com/kerriemariah/15-minute-meeting"
                                         className="white-text text-uppercase d-inline-block"
                                     >
                                         Schedule a Call
