@@ -128,6 +128,15 @@ export default function ContactForm() {
                             </div>
                         </div>
 
+                        <div className="privacy-notice mb-20" style={{fontSize: "14px", color: "#666", lineHeight: "1.5"}}>
+                            <p className="mb-0">
+                                By submitting this form, you agree to our{" "}
+                                <a href="/privacy-policy" target="_blank" style={{color: "#c75142", textDecoration: "underline"}}>
+                                    Privacy Policy
+                                </a>. We only use your information to respond to your inquiry and do not share, sell, or distribute your personal information to third parties.
+                            </p>
+                        </div>
+                        
                         <button
                             className="btn position-relative over-hidden text-white d-inline-block theme-bg white-text text-uppercase"
                             type="submit"

@@ -38,7 +38,7 @@ export default function Footer() {
                                         />
                                     </div>
                                     <div className="copyright-text text-center text-lg-left">
-                                        <p className="mb-0" style={{fontSize: "15px", lineHeight: "1.6"}}>
+                                        <p className="mb-2" style={{fontSize: "15px", lineHeight: "1.6"}}>
                                             All rights reserved{" "}
                                             <Link
                                                 href="/"
@@ -48,6 +48,14 @@ export default function Footer() {
                                             </Link>{" "}
                                             © {new Date().getFullYear()}
                                         </p>
+                                        <div className="legal-links" style={{fontSize: "13px"}}>
+                                            <a href="/privacy-policy" style={{color: "#666", textDecoration: "none", marginRight: "15px"}}>
+                                                Privacy Policy
+                                            </a>
+                                            <a href="/terms-of-service" style={{color: "#666", textDecoration: "none"}}>
+                                                Terms of Service
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
