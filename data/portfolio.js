@@ -7,7 +7,7 @@ export const portfolioItems = [
         image: "/images/portfolio/alchemist-kava.png",
         technologies: ["WordPress", "Custom CSS", "Responsive Design"],
         liveUrl: "https://alchemistkava.com/",
-        featured: true
+        featured: false
     },
     {
         id: 2,
@@ -16,7 +16,7 @@ export const portfolioItems = [
         description: "Modern automotive service website. Built with Next.js and Tailwind CSS for optimal performance and mobile responsiveness.",
         image: "/images/portfolio/fixturbo.png",
         technologies: ["Next.js", "Tailwind CSS", "Responsive Design"],
-        liveUrl: "https://fixturbo.com/",
+        liveUrl: "https://fix-turbo-pro.vercel.app/",
         featured: true
     },
     {
@@ -27,7 +27,7 @@ export const portfolioItems = [
         image: "/images/portfolio/caves-for-kobolds.png",
         technologies: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
         liveUrl: "https://www.cavesforkobolds.com/",
-        featured: true
+        featured: false
     },
     {
         id: 4,
@@ -37,7 +37,7 @@ export const portfolioItems = [
         image: "/images/portfolio/elite-mortage-source.png",
         technologies: ["WordPress", "Custom CSS", "Responsive Design"],
         liveUrl: "https://elitemortgagesource.com",
-        featured: true
+        featured: false
     },
     {
         id: 5,
@@ -57,7 +57,7 @@ export const portfolioItems = [
         image: "/images/portfolio/pampered-image.png",
         technologies: ["Next.js", "Resend", "Responsive Design", "Contact Forms"],
         liveUrl: "https://www.pamperedimagebeautybar.com/",
-        featured: false
+        featured: true
     },
     {
         id: 7,
@@ -97,7 +97,7 @@ export const portfolioItems = [
         image: "/images/portfolio/the-wellness-tailor.png",
         technologies: ["Shopify", "Liquid", "Conditional Logic", "Quiz Integration"],
         liveUrl: "https://thewellnesstailor.com/",
-        featured: false
+        featured: true
     },
     {
         id: 11,
@@ -107,7 +107,7 @@ export const portfolioItems = [
         image: "/images/portfolio/small-business-data.png",
         technologies: ["Next.js", "Fivetran", "Google APIs", "Data Management"],
         liveUrl: "https://sbd-zeta.vercel.app/",
-        featured: false
+        featured: true
     },
     {
         id: 12,
@@ -117,7 +117,7 @@ export const portfolioItems = [
         image: "/images/portfolio/tariff-calc.png",
         technologies: ["React", "Data Analysis", "API Integration", "Financial Modeling"],
         liveUrl: "https://www.tariff-calc.com/",
-        featured: true
+        featured: false
     },
     {
         id: 13,
@@ -128,7 +128,37 @@ export const portfolioItems = [
         technologies: ["Next.js", "Custom CMS", "Content Strategy", "SEO Optimization"],
         liveUrl: "https://www.the-traveling-coder.com/",
         featured: false
+    },
+    {
+        id: 14,
+        title: "Dux",
+        category: "Business Website",
+        description: "High-impact landing page designed to drive conversions with bold visuals and clear CTA hierarchy.",
+        image: "/images/portfolio/dux.jpg",
+        technologies: ["Next.js", "Tailwind CSS", "Landing Page"],
+        liveUrl: "https://www.duxinno.com/",
+        featured: true
+    },
+    {
+        id: 15,
+        title: "WordPress Custom Plugins",
+        category: "Custom Software",
+        description: "Suite of bespoke WordPress plugins enabling advanced features, integrations, and admin workflows.",
+        image: "/images/portfolio/custom-plugins.png",
+        technologies: ["WordPress", "PHP", "Plugin Development"],
+        liveUrl: null,
+        featured: false
+    },
+    {
+        id: 16,
+        title: "Python Scripts for Automations",
+        category: "Custom Software",
+        description: "Custom Python automation scripts for data processing and workflow orchestration.",
+        image: "/images/portfolio/python.png",
+        technologies: ["Python", "Automation", "APIs"],
+        liveUrl: null,
+        featured: true
     }
 ];
 
-export const categories = ["All", "Business Website", "Web Application", "Ecommerce", "Content Creation"]; 
+export const categories = ["All", "Business Website", "Web Application", "Ecommerce", "Content Creation", "Custom Software"]; 

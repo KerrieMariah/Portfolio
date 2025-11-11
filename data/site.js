@@ -17,7 +17,7 @@ export const works = [
         brief: "Creating websitses for small business owners that they can afford.",
         filter: "design",
         client: "FixTurbo",
-        link: "https://fixturbo.pro/",
+        link: "https://fix-turbo-pro.vercel.app/",
         Duration: "2 Weeks",
         Cost: "$2,500",
         Tags: "Web Design, Content Writing, Systems Automation",

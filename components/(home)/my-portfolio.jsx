@@ -8,9 +8,9 @@ export default function MyPortfolio() {
     const [activeFilter, setActiveFilter] = useState("All");
     const [isLoading, setIsLoading] = useState(false);
 
-    // Show featured items for "All", or top 4 from selected category
+    // Show 6 featured items for "All", or top 4 from selected category
     const homePortfolioItems = activeFilter === "All" 
-        ? portfolioItems.filter(item => item.featured).slice(0, 4)
+        ? portfolioItems.filter(item => item.featured).slice(0, 6)
         : portfolioItems.filter(item => item.category === activeFilter).slice(0, 4);
     
     const filteredItems = homePortfolioItems;
@@ -97,14 +97,14 @@ export default function MyPortfolio() {
                     <div className={`row portfolio-grid ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
                         {filteredItems.map((item, index) => (
                             <div 
-                                key={item.id}
-                                className="col-lg-6 col-md-6 col-12 grid-item"
-                                data-aos="fade-up"
-                                data-aos-duration={1000}
-                                data-aos-delay={index * 100}
-                            >
-                                <div className="work-card">
-                                    <div className="work-card-image">
+                            key={item.id}
+                            className="col-lg-4 col-md-6 col-12 grid-item d-flex"
+                            data-aos="fade-up"
+                            data-aos-duration={1000}
+                            data-aos-delay={index * 100}
+                        >
+                            <div className="work-card" style={{ display: "flex", flexDirection: "column", height: "100%" }}>
+                                <div className="work-card-image" style={{ height: "320px", overflow: "hidden" }}>
                                         <Image
                                             src={item.image}
                                             alt={item.title}
@@ -112,26 +112,24 @@ export default function MyPortfolio() {
                                             height={400}
                                             className="w-100 h-100 object-cover"
                                         />
-                                        {item.featured && (
-                                            <div className="featured-badge">
-                                                <span>Featured</span>
-                                            </div>
-                                        )}
+                                        
                                         <div className="work-card-overlay">
                                             <div className="overlay-content">
-                                                <Link 
-                                                    href={item.liveUrl}
-                                                    target="_blank"
-                                                    className="overlay-btn live-btn"
-                                                >
-                                                    <i className="fas fa-external-link-alt"></i>
-                                                    View Live Site
-                                                </Link>
+                                                {item.liveUrl && (
+                                                    <Link 
+                                                        href={item.liveUrl}
+                                                        target="_blank"
+                                                        className="overlay-btn live-btn"
+                                                    >
+                                                        <i className="fas fa-external-link-alt"></i>
+                                                        View Live Site
+                                                    </Link>
+                                                )}
                                             </div>
                                         </div>
                                     </div>
                                     
-                                    <div className="work-card-content">
+                                    <div className="work-card-content" style={{ flexGrow: 1 }}>
                                         <div className="work-card-category">
                                             {item.category}
                                         </div>

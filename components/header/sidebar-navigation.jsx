@@ -1,9 +1,11 @@
 "use client";
 import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
 import navigation from "@/data/navigation";
-import { Link } from "react-scroll";
+import NextLink from "next/link";
+import { Link as ScrollLink } from "react-scroll";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleSidebar } from "@/redux/features/toggle/toggleSlice";
+import { usePathname } from "next/navigation";
 
 const social = [
     {
@@ -26,6 +28,8 @@ export default function SidebarNavigation() {
     );
 
     const dispatch = useDispatch();
+    const pathname = usePathname();
+    const isHome = pathname === "/";
 
     return (
         <div className={`ui-sidebar ${isSidebarActive ? "active" : ""}`} style={{background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)", backdropFilter: "blur(10px)"}}>
@@ -60,26 +64,60 @@ export default function SidebarNavigation() {
                             <MenuItem
                                 key={i}
                                 component={
-                                    <Link
-                                        href="#"
-                                        to={item.path}
-                                        spy={true}
-                                        smooth={true}
-                                        offset={-75}
-                                        duration={500}
-                                        activeClass="ui-sidebar-active"
-                                        style={{
-                                            color: "white",
-                                            textDecoration: "none",
-                                            fontSize: "18px",
-                                            fontWeight: "500",
-                                            padding: "15px 20px",
-                                            display: "block",
-                                            borderRadius: "8px",
-                                            transition: "all 0.3s ease",
-                                            marginBottom: "8px"
-                                        }}
-                                    />
+                                    item.path === "portfolio" ? (
+                                        <NextLink
+                                            href="/portfolio"
+                                            style={{
+                                                color: "white",
+                                                textDecoration: "none",
+                                                fontSize: "18px",
+                                                fontWeight: "500",
+                                                padding: "15px 20px",
+                                                display: "block",
+                                                borderRadius: "8px",
+                                                transition: "all 0.3s ease",
+                                                marginBottom: "8px"
+                                            }}
+                                        />
+                                    ) : (
+                                        isHome ? (
+                                            <ScrollLink
+                                                href="#"
+                                                to={item.path}
+                                                spy={true}
+                                                smooth={true}
+                                                offset={-75}
+                                                duration={500}
+                                                activeClass="ui-sidebar-active"
+                                                style={{
+                                                    color: "white",
+                                                    textDecoration: "none",
+                                                    fontSize: "18px",
+                                                    fontWeight: "500",
+                                                    padding: "15px 20px",
+                                                    display: "block",
+                                                    borderRadius: "8px",
+                                                    transition: "all 0.3s ease",
+                                                    marginBottom: "8px"
+                                                }}
+                                            />
+                                        ) : (
+                                            <NextLink
+                                                href={`/#${item.path}`}
+                                                style={{
+                                                    color: "white",
+                                                    textDecoration: "none",
+                                                    fontSize: "18px",
+                                                    fontWeight: "500",
+                                                    padding: "15px 20px",
+                                                    display: "block",
+                                                    borderRadius: "8px",
+                                                    transition: "all 0.3s ease",
+                                                    marginBottom: "8px"
+                                                }}
+                                            />
+                                        )
+                                    )
                                 }
                                 onClick={() => dispatch(toggleSidebar())}
                                 style={{
@@ -112,7 +150,7 @@ export default function SidebarNavigation() {
                         <ul className="social text-center d-flex justify-content-center" style={{listStyle: "none", padding: 0, margin: 0}}>
                             {social?.map((item, i) => (
                                 <li key={i} className="mx-2">
-                                    <Link
+                                    <NextLink
                                         className="text-white d-flex align-items-center justify-content-center"
                                         href={item.href}
                                         style={{
@@ -123,17 +161,9 @@ export default function SidebarNavigation() {
                                             transition: "all 0.3s ease",
                                             textDecoration: "none"
                                         }}
-                                        onMouseEnter={(e) => {
-                                            e.target.style.background = "rgba(255, 255, 255, 0.3)";
-                                            e.target.style.transform = "scale(1.1)";
-                                        }}
-                                        onMouseLeave={(e) => {
-                                            e.target.style.background = "rgba(255, 255, 255, 0.2)";
-                                            e.target.style.transform = "scale(1)";
-                                        }}
                                     >
                                         <i className={item.icon} style={{fontSize: "18px"}} />
-                                    </Link>
+                                    </NextLink>
                                 </li>
                             ))}
                         </ul>

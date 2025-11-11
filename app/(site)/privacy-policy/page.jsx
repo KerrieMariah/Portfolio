@@ -7,7 +7,7 @@ export default function PrivacyPolicy() {
     return (
         <>
             <Header />
-            <main>
+            <main style={{ paddingTop: "120px", paddingBottom: "120px" }}>
                 <div className="container py-80">
                     <div className="row justify-content-center">
                         <div className="col-lg-8 col-md-10">

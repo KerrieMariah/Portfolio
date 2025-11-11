@@ -117,13 +117,13 @@ export default function PortfolioPage() {
                                 {filteredItems.map((item, index) => (
                                     <div 
                                         key={item.id}
-                                        className="col-lg-4 col-md-6 col-12 grid-item mb-40"
+                                        className="col-lg-4 col-md-6 col-12 grid-item mb-40 d-flex"
                                         data-aos="fade-up"
                                         data-aos-duration={550}
                                         data-aos-delay={index * 25}
                                     >
-                                        <div className="work-card full-portfolio-card">
-                                            <div className="work-card-image">
+                                        <div className="work-card full-portfolio-card" style={{ display: "flex", flexDirection: "column", height: "100%" }}>
+                                            <div className="work-card-image" style={{ height: "320px", overflow: "hidden" }}>
                                                 <Image
                                                     src={item.image}
                                                     alt={item.title}
@@ -131,26 +131,24 @@ export default function PortfolioPage() {
                                                     height={400}
                                                     className="w-100 h-100 object-cover"
                                                 />
-                                                {item.featured && (
-                                                    <div className="featured-badge">
-                                                        <span>Featured</span>
-                                                    </div>
-                                                )}
+                                                
                                                 <div className="work-card-overlay">
                                                     <div className="overlay-content">
-                                                        <Link 
-                                                            href={item.liveUrl}
-                                                            target="_blank"
-                                                            className="overlay-btn live-btn"
-                                                        >
-                                                            <i className="fas fa-external-link-alt"></i>
-                                                            View Live Site
-                                                        </Link>
+                                                        {item.liveUrl && (
+                                                            <Link 
+                                                                href={item.liveUrl}
+                                                                target="_blank"
+                                                                className="overlay-btn live-btn"
+                                                            >
+                                                                <i className="fas fa-external-link-alt"></i>
+                                                                View Live Site
+                                                            </Link>
+                                                        )}
                                                     </div>
                                                 </div>
                                             </div>
                                             
-                                            <div className="work-card-content">
+                                            <div className="work-card-content" style={{ flexGrow: 1 }}>
                                                 <div className="work-card-category">
                                                     {item.category}
                                                 </div>

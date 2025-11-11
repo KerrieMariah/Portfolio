@@ -92,9 +92,20 @@ export default function Footer() {
                                             <i className="fas fa-envelope mr-2 theme-color"></i>
                                             kerrie@kerriemariah.com
                                         </p>
-                                        <p className="mb-0" style={{fontSize: "15px", lineHeight: "1.6"}}>
+                                        <p className="mb-2" style={{fontSize: "15px", lineHeight: "1.6"}}>
                                             <i className="fas fa-phone mr-2 theme-color"></i>
                                             +1 (352) 316-7889
+                                        </p>
+                                        <p className="mb-0" style={{fontSize: "15px", lineHeight: "1.6"}}>
+                                            <i className="fab fa-whatsapp mr-2 theme-color"></i>
+                                            <a 
+                                                href="https://wa.me/85251211421" 
+                                                target="_blank" 
+                                                rel="noopener noreferrer"
+                                                style={{ color: "inherit", textDecoration: "none" }}
+                                            >
+                                                +852 5121 1421
+                                            </a>
                                         </p>
                                     </div>
                                 </div>
