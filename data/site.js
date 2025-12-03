@@ -41,7 +41,7 @@ export const works = [
         brief: "Creating engaging multi-faceted websites for a variety of clients.",
         filter: "design",
         client: "Caves for Kobolds",
-        link: "https://www.cavesforkobolds.com/",
+        link: "https://caves-for-kobolds.vercel.app/",
         Duration: "2 weeks",
         Cost: "$3,000",
         Tags: "Web Design, Content Writing, Systems Automation, E-commerce",

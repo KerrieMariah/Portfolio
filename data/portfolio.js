@@ -26,7 +26,7 @@ export const portfolioItems = [
         description: "Full-featured e-commerce solution with payment integration, inventory management, and customer analytics.",
         image: "/images/portfolio/caves-for-kobolds.png",
         technologies: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
-        liveUrl: "https://www.cavesforkobolds.com/",
+        liveUrl: "https://caves-for-kobolds.vercel.app/",
         featured: false
     },
     {
