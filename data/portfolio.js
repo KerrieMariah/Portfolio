@@ -116,7 +116,7 @@ export const portfolioItems = [
         description: "Real-time tariff impact calculator analyzing trade policy changes, providing businesses with instant cost projections based on proposed tariff modifications.",
         image: "/images/portfolio/tariff-calc.png",
         technologies: ["React", "Data Analysis", "API Integration", "Financial Modeling"],
-        liveUrl: "https://www.tariff-calc.com/",
+        liveUrl: "https://tarif-calculator.vercel.app/",
         featured: false
     },
     {
