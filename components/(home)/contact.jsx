@@ -15,11 +15,11 @@ const contact = [
         title: "Email",
         text: "kerrie@kerriemariah.com",
     },
-    {
-        icon: "fab fa-whatsapp",
-        title: "WhatsApp",
-        text: "+852 5121 1421",
-    },
+    // {
+    //     icon: "fab fa-whatsapp",
+    //     title: "WhatsApp",
+    //     text: "+852 5121 1421",
+    // },
 ];
 
 export default function Contact() {

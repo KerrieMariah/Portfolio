@@ -1,5 +1,65 @@
 export const portfolioItems = [
     {
+        id: 17,
+        title: "Empire Garage Doors of Naples",
+        category: "Business Website",
+        description: "Local service website for a father-and-son garage door company in Naples, Florida, built to turn search traffic into same-day repair calls and free estimates.",
+        image: "/images/portfolio/empire-garage-doors.png",
+        technologies: ["Next.js", "Responsive Design", "Local SEO"],
+        liveUrl: "https://www.empiregaragedoorsofnaples.com/",
+        featured: true
+    },
+    {
+        id: 18,
+        title: "DryZone Inc",
+        category: "Business Website",
+        description: "Restoration company website for water damage, mold, fire, and storm work across Southwest Florida, with 24/7 emergency contact built into the first screen.",
+        image: "/images/portfolio/dryzone.png",
+        technologies: ["Next.js", "Responsive Design", "Local SEO"],
+        liveUrl: "https://www.dryzoneinc.net/",
+        featured: true
+    },
+    {
+        id: 19,
+        title: "PBP Solutions",
+        category: "Business Website",
+        description: "Enterprise technology website for a firm that designs, builds, secures, and operates mission-ready systems for government, commercial, and healthcare clients.",
+        image: "/images/portfolio/pbp-solutions.png",
+        technologies: ["Next.js", "Responsive Design"],
+        liveUrl: "https://pbpsolutions.tech/",
+        featured: true
+    },
+    {
+        id: 20,
+        title: "SmartWays Marketing Group",
+        category: "Business Website",
+        description: "Marketing consultancy website for SmartWays Marketing Group, built in WordPress to turn a clear strategy message into booked consultations.",
+        image: "/images/portfolio/smartways-marketing.png",
+        technologies: ["WordPress", "Breakdance", "Responsive Design"],
+        liveUrl: "https://smartwaysmarketinggroup.com/",
+        featured: true
+    },
+    {
+        id: 21,
+        title: "MixMonsters",
+        category: "Ecommerce",
+        description: "Shopify launch site for a customizable children's book series, where each child becomes the hero of their own adventure.",
+        image: "/images/portfolio/mix-monsters.png",
+        technologies: ["Shopify", "Responsive Design"],
+        liveUrl: "https://mixmonsters.club/",
+        featured: true
+    },
+    {
+        id: 22,
+        title: "Catskills Coherence Co",
+        category: "Business Website",
+        description: "Wellness brand website for bioenergetic practitioner Ila Hubbard, designed as a calm introduction to her work, 1:1 offerings, and local pop-ups.",
+        image: "/images/portfolio/catskills-coherence.png",
+        technologies: ["Squarespace", "Responsive Design"],
+        liveUrl: "https://www.catskillscoherenceco.com/",
+        featured: true
+    },
+    {
         id: 1,
         title: "Alchemist Kava",
         category: "Business Website",
@@ -79,16 +139,16 @@ export const portfolioItems = [
         liveUrl: "https://www.youtube.com/watch?v=4zODcYp1og0&ab_channel=MetroTrade",
         featured: false
     },
-    {
-        id: 9,
-        title: "At Long Last Atelier",
-        category: "Ecommerce",
-        description: "Luxury e-commerce platform redesign using Shopify and Liquid, transforming the user experience to reflect premium brand positioning for this Hong Kong-based boutique.",
-        image: "/images/portfolio/at-long-last.png",
-        technologies: ["Shopify", "Liquid", "UX/UI Design", "E-commerce Optimization"],
-        liveUrl: "https://www.atlonglastatelier.com/",
-        featured: false
-    },
+    // {
+    //     id: 9,
+    //     title: "At Long Last Atelier",
+    //     category: "Ecommerce",
+    //     description: "Luxury e-commerce platform redesign using Shopify and Liquid, transforming the user experience to reflect premium brand positioning for this Hong Kong-based boutique.",
+    //     image: "/images/portfolio/at-long-last.png",
+    //     technologies: ["Shopify", "Liquid", "UX/UI Design", "E-commerce Optimization"],
+    //     liveUrl: "https://www.atlonglastatelier.com/",
+    //     featured: false
+    // },
     {
         id: 10,
         title: "The Wellness Tailor",
@@ -97,16 +157,6 @@ export const portfolioItems = [
         image: "/images/portfolio/the-wellness-tailor.png",
         technologies: ["Shopify", "Liquid", "Conditional Logic", "Quiz Integration"],
         liveUrl: "https://thewellnesstailor.com/",
-        featured: true
-    },
-    {
-        id: 11,
-        title: "Small Biz Data",
-        category: "Business Website",
-        description: "Automated data backup solution for small businesses, integrating Fivetran and Google services to help business owners maintain control and ownership of their critical data.",
-        image: "/images/portfolio/small-business-data.png",
-        technologies: ["Next.js", "Fivetran", "Google APIs", "Data Management"],
-        liveUrl: "https://sbd-zeta.vercel.app/",
         featured: true
     },
     {

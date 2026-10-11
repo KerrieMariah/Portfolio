@@ -96,7 +96,7 @@ export default function Footer() {
                                             <i className="fas fa-phone mr-2 theme-color"></i>
                                             +1 (352) 316-7889
                                         </p>
-                                        <p className="mb-0" style={{fontSize: "15px", lineHeight: "1.6"}}>
+                                        {/* <p className="mb-0" style={{fontSize: "15px", lineHeight: "1.6"}}>
                                             <i className="fab fa-whatsapp mr-2 theme-color"></i>
                                             <a 
                                                 href="https://wa.me/85251211421" 
@@ -106,7 +106,7 @@ export default function Footer() {
                                             >
                                                 +852 5121 1421
                                             </a>
-                                        </p>
+                                        </p> */}
                                     </div>
                                 </div>
                             </div>

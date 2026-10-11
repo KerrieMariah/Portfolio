@@ -54,7 +54,7 @@ export default function Hero() {
                                                     1000,
                                                     "Web Designer",
                                                     1000,
-                                                    "Freelancer",
+                                                    "Consultant",
                                                     1000,
                                                 ]}
                                                 wrapper="span"

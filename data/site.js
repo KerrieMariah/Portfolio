@@ -251,7 +251,7 @@ export const awardInfo = [
         title: "Softr Certified Professional",
         year: 2024,
         association: "Softr",
-        location: "Hong Kong",
+        location: "Naples, Florida",
         description:
             "Studied and passed the Softr Certified Professional exam which makes me the top 1% of Softr developers worldwide.",
     },
