@@ -53,11 +53,61 @@ const faqs = [
 export const metadata = {
   title: "$290 Website Revamp + Local SEO for Naples, FL Businesses | Kerrie Mariah",
   description: "A full website revamp for $290 with local and AI SEO for $450/month. Monthly reporting included, and we meet in person in Naples, Florida.",
+  alternates: { canonical: "/seo-revamp" },
   openGraph: {
     title: "A website you're proud of, built here in Naples.",
     description: "$290 full website revamp with local + AI SEO for $450/month. Free in-person audit in Naples.",
+    url: "/seo-revamp",
     images: ["/images/about/about-img.jpg"],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "$290 Website Revamp + Local SEO for Naples, FL Businesses",
+    description: "$290 full website revamp with local + AI SEO for $450/month. Free in-person audit in Naples.",
+    images: ["/images/about/about-img.jpg"],
+  },
+};
+
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Kerrie Mariah",
+  url: "https://kerriemariah.com/seo-revamp",
+  image: "https://kerriemariah.com/images/about/about-img.jpg",
+  email: "kerrie@kerriemariah.com",
+  areaServed: { "@type": "City", name: "Naples" },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Naples",
+    addressRegion: "FL",
+    addressCountry: "US",
+  },
+  makesOffer: [
+    {
+      "@type": "Offer",
+      name: "Website revamp",
+      price: "290",
+      priceCurrency: "USD",
+      description: "A brand-new, mobile-first website.",
+    },
+    {
+      "@type": "Offer",
+      name: "Local and AI SEO",
+      price: "450",
+      priceCurrency: "USD",
+      description: "Per month, with reporting. 3-month minimum, then month-to-month.",
+    },
+  ],
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
 };
 
 function Icon({ path }) {
@@ -82,6 +132,8 @@ function SectionCta({ note }) {
 export default function SeoRevampPage() {
   return (
     <main className={styles.page}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <a className={styles.topBar} href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
         Naples &amp; SWFL business owners: get a <strong>free, in-person website audit</strong> <span>→</span>
       </a>

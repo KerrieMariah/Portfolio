@@ -24,6 +24,7 @@ const work = [
 export const metadata = {
   title: "Kerrie Mariah | Software Engineer, Product Creator & Consultant",
   description: "Kerrie Mariah builds custom software, thoughtful systems, digital products and beautiful online experiences.",
+  robots: { index: false, follow: false },
 };
 
 export default function NewHomepage() {

@@ -15,9 +15,35 @@ import ServiceArea from "@/components/(home)/service-area";
 import Footer from "@/components/footer/footer";
 import Header1 from "@/components/header/homepage-header";
 
+const personJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Kerrie Mariah",
+    jobTitle: "Software Engineer",
+    url: "https://kerriemariah.com",
+    email: "mailto:kerrie@kerriemariah.com",
+    image: "https://kerriemariah.com/images/about/about-img.jpg",
+    address: {
+        "@type": "PostalAddress",
+        addressLocality: "Naples",
+        addressRegion: "FL",
+        addressCountry: "US",
+    },
+    sameAs: [
+        "https://www.linkedin.com/in/kerriemariah/",
+        "https://www.instagram.com/kerrie_mariah/",
+        "https://www.facebook.com/kerrie.x.mariah/",
+    ],
+};
+
+export const metadata = {
+    alternates: { canonical: "/" },
+};
+
 export default function Home() {
     return (
         <>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }} />
             <main className="over-hidden">
                 <Header1 />
                 <Hero />
