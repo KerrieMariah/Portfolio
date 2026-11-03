@@ -14,6 +14,8 @@ const work = [
   { tag: "Restoration · Website", title: "DryZone Inc", text: "Water, mold, fire, and storm restoration across Southwest Florida, with emergency contact on the first screen.", image: "/images/portfolio/dryzone.png" },
   { tag: "Enterprise · Website", title: "PBP Solutions", text: "A technology firm site for designing, securing, and operating mission-ready systems.", image: "/images/portfolio/pbp-solutions.png" },
   { tag: "Marketing · Website", title: "SmartWays Marketing Group", text: "A consultancy site that makes a clear marketing strategy feel obvious, then turns it into booked calls.", image: "/images/portfolio/smartways-marketing.png" },
+  { tag: "Commerce · Gifts", title: "Hallby", text: "A Shopify store for curated letterbox gifts, build-your-own boxes, and a monthly self-care subscription.", image: "/images/portfolio/hallby.png" },
+  { tag: "Commerce · Self care", title: "Arthur Betsy", text: "A Shopify store for a British self-care brand, from bath soaks and candles to gift sets.", image: "/images/portfolio/arthur-betsy.png" },
   { tag: "Commerce · Brand", title: "MixMonsters", text: "A Shopify launch site for a customizable children's book series, where the child is the hero.", image: "/images/portfolio/mix-monsters.png" },
   { tag: "Wellness · Website", title: "Catskills Coherence Co", text: "A calm brand site for bioenergetic practitioner Ila Hubbard, her 1:1 work, and local pop-ups.", image: "/images/portfolio/catskills-coherence.png" },
   { tag: "Software · Operations", title: "Business command centers", text: "Custom dashboards connecting analytics, SEO, projects and recurring work into one useful view.", image: "/images/portfolio/graphdata.png" },

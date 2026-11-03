@@ -1,5 +1,25 @@
 export const portfolioItems = [
     {
+        id: 23,
+        title: "Hallby",
+        category: "Ecommerce",
+        description: "Shopify store for a Lichfield gift company, with curated letterbox boxes, a build-your-own option, and a monthly self-care subscription.",
+        image: "/images/portfolio/hallby.png",
+        technologies: ["Shopify", "Responsive Design"],
+        liveUrl: "https://hallby.co.uk/",
+        featured: true
+    },
+    {
+        id: 24,
+        title: "Arthur Betsy",
+        category: "Ecommerce",
+        description: "Shopify store for an independent British self-care brand, covering bath and body, candles, and gift sets made for everyday rituals.",
+        image: "/images/portfolio/arthur-betsy.png",
+        technologies: ["Shopify", "Responsive Design"],
+        liveUrl: "https://www.arthurbetsy.co.uk/",
+        featured: true
+    },
+    {
         id: 17,
         title: "Empire Garage Doors of Naples",
         category: "Business Website",
