@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
 import BeforeAfter from "./before-after";
 import LeadForm from "./lead-form";
 import MobileCta from "./mobile-cta";
@@ -133,15 +132,6 @@ function SectionCta({ note }) {
 export default function SeoRevampPage() {
   return (
     <main className={styles.page}>
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-VQTEDTV3G6" strategy="afterInteractive" />
-      <Script id="seo-revamp-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-VQTEDTV3G6');
-        `}
-      </Script>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <a className={styles.topBar} href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
