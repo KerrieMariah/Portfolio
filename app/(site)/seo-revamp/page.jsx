@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 import BeforeAfter from "./before-after";
 import LeadForm from "./lead-form";
 import MobileCta from "./mobile-cta";
@@ -132,6 +133,17 @@ function SectionCta({ note }) {
 export default function SeoRevampPage() {
   return (
     <main className={styles.page}>
+      <Script id="seo-revamp-conversion" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('event', 'conversion', {
+            'send_to': 'AW-17527099253/lhzvCLXaiJMbEPWeyaVB',
+            'value': 1.0,
+            'currency': 'USD'
+          });
+        `}
+      </Script>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <a className={styles.topBar} href={BOOKING_URL} target="_blank" rel="noopener noreferrer">

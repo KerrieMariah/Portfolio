@@ -43,6 +43,7 @@ export default function RootLayout({ children }) {
                         function gtag(){dataLayer.push(arguments);}
                         gtag('js', new Date());
                         gtag('config', 'G-VQTEDTV3G6');
+                        gtag('config', 'AW-17527099253');
                     `}
                 </Script>
 
