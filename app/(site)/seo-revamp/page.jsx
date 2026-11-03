@@ -5,20 +5,36 @@ import LeadForm from "./lead-form";
 import MobileCta from "./mobile-cta";
 import styles from "./seo-revamp.module.css";
 
+const pains = [
+  { text: "Your website looks outdated, or is hard to use on a phone.", icon: "M8 3h8a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm3 15h2" },
+  { text: "Customers search for what you do, and can't find you on Google.", icon: "M10.5 17a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13Zm4.6-1.9L20 20" },
+  { text: "ChatGPT and Google's AI recommend your competitors instead.", icon: "M4 5h16v11H9l-5 4V5Zm4 5h8M8 13h5" },
+  { text: "You pay for marketing but can't tell if it's working.", icon: "M4 20V10m6 10V4m6 16v-7m4 7H2" },
+];
+
+const recentWork = [
+  { name: "Empire Garage Doors", url: "https://www.empiregaragedoorsofnaples.com/" },
+  { name: "DryZone Inc", url: "https://www.dryzoneinc.net/" },
+  { name: "Goofy Waves", url: "https://www.goofywaves.com/" },
+  { name: "SmartWays Marketing", url: "https://smartwaysmarketinggroup.com/" },
+  { name: "PBP Solutions", url: "https://pbpsolutions.tech/" },
+  { name: "Hallby", url: "https://hallby.co.uk/" },
+  { name: "Arthur Betsy", url: "https://www.arthurbetsy.co.uk/" },
+];
+
 const pipeline = [
   { title: "Meet", text: "Coffee in Naples or at your business. No pressure.", price: "Free", icon: "M7 8h10v5a5 5 0 0 1-10 0V8Zm10 1h1.5a2.5 2.5 0 0 1 0 5H17M6 20h12" },
   { title: "Audit", text: "I review your site, Google presence and competitors.", price: "Free", icon: "M10.5 17a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13Zm4.6-1.9L20 20" },
   { title: "Revamp", text: "I rebuild your website: fast, modern and mobile-first.", price: "$290", icon: "M4 5h16v11H4zM9 20h6M12 16v4M8 9h5M8 12h8" },
-  { title: "Grow", text: "Local + AI SEO every month, with a clear report.", price: "$450/mo", icon: "M4 18l5-6 4 3 7-9M15 6h5v5" },
+  { title: "Grow", text: "Every month I help more customers find you.", price: "$450/mo", icon: "M4 18l5-6 4 3 7-9M15 6h5v5" },
 ];
 
-const included = [
-  "Full website revamp",
-  "Local SEO for Naples & Southwest Florida",
-  "AI SEO for ChatGPT, Gemini & Google AI",
-  "Technical & on-page SEO",
-  "Monthly plain-English report",
-  "In-person meetings in Naples",
+const stack = [
+  { title: "A brand-new website", text: "Modern, fast, and built to turn visitors into calls.", value: "$290", was: "$800+" },
+  { title: "Show up on Google", text: "Rank higher in Google search and Google Maps around Naples.", value: "Included" },
+  { title: "Get recommended by AI", text: "Be the business ChatGPT, Gemini and Google's AI suggest.", value: "Included" },
+  { title: "A simple monthly report", text: "What improved and what's next, in plain English.", value: "Included" },
+  { title: "Real meetings in Naples", text: "Sit down with me face to face, not a call center.", value: "Included" },
 ];
 
 const work = [
@@ -27,21 +43,19 @@ const work = [
 ];
 
 const faqs = [
-  { q: "Why is the website only $290?", a: "Because it comes with the SEO plan. A site like this normally starts at $800. Pairing it with monthly SEO lets me build it for a fraction of that, and it means your new site actually gets seen." },
-  { q: "Is there a contract?", a: "Just a 3-month minimum on the SEO plan. After that it's month-to-month and you can cancel anytime. SEO usually takes around 90 days to show real results, so three months is a fair test for both of us." },
-  { q: "What will I pay in the first 3 months?", a: "$290 for the website revamp, plus $450 a month for SEO. That's $1,640 total for the first three months, then $450 a month after that." },
-  { q: "What is AI SEO?", a: "More customers now ask ChatGPT, Gemini and Google's AI for recommendations. AI SEO structures your site and listings so those tools understand, trust and mention your business." },
-  { q: "Can we really meet in person?", a: "Yes, I'd honestly prefer it. I meet clients across Naples, at your business or over coffee. Video calls work too." },
+  { q: "Why is the website only $290?", a: "Because it comes with the monthly plan. A site like this normally starts at $800. Pairing it with ongoing SEO lets me build it for a fraction of that, and it means your new site actually gets seen." },
+  { q: "Is there a contract?", a: "Just a 3-month minimum on the monthly plan. After that it's month-to-month and you can cancel anytime. SEO usually takes around 90 days to show real results, so three months is a fair test for both of us." },
+  { q: "What will I pay in the first 3 months?", a: "$290 for the website, plus $450 a month. That's $1,640 total for the first three months, then $450 a month after that, cancellable anytime after the first three months." },
+  { q: "What does \"recommended by AI\" mean?", a: "More customers now ask ChatGPT, Gemini and Google's AI things like \"who's the best plumber in Naples?\" I set up your website and listings so those tools understand, trust and mention your business." },
+  { q: "Is the audit really free?", a: "Yes. We meet, I look at your website and how you show up online, and you get honest recommendations. No obligation to sign up." },
 ];
 
-const reportBars = [34, 42, 39, 55, 61, 58, 72, 80, 94];
-
 export const metadata = {
-  title: "$290 Website Revamp + Local & AI SEO for Naples, FL Businesses | Kerrie Mariah",
+  title: "$290 Website Revamp + Local SEO for Naples, FL Businesses | Kerrie Mariah",
   description: "A full website revamp for $290 with local and AI SEO for $450/month. Monthly reporting included, and we meet in person in Naples, Florida.",
   openGraph: {
     title: "A website you're proud of, built here in Naples.",
-    description: "$290 full website revamp with local + AI SEO for $450/month. Reporting included. Meet in person in Naples.",
+    description: "$290 full website revamp with local + AI SEO for $450/month. Free in-person audit in Naples.",
     images: ["/images/about/about-img.jpg"],
   },
 };
@@ -54,57 +68,123 @@ function Icon({ path }) {
   );
 }
 
+const BOOKING_URL = "https://schedule.kerriemariah.com/in-person-website-audit";
+
+function SectionCta({ note }) {
+  return (
+    <div className={styles.sectionCta}>
+      <a className={styles.primaryButton} href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Book my free audit <span>→</span></a>
+      {note && <small>{note}</small>}
+    </div>
+  );
+}
+
 export default function SeoRevampPage() {
   return (
     <main className={styles.page}>
-      <header className={styles.header}>
-        <Link className={styles.wordmark} href="/">Kerrie Mariah</Link>
-        <nav className={styles.nav} aria-label="Page sections">
-          <a href="#how">How it works</a>
-          <a href="#included">What&apos;s included</a>
-          <a href="#work">Work</a>
-          <a href="#faq">FAQ</a>
-        </nav>
-        <a className={styles.headerCta} href="#start">Book a free audit <span>↗</span></a>
-      </header>
+      <a className={styles.topBar} href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+        Naples &amp; SWFL business owners: get a <strong>free, in-person website audit</strong> <span>→</span>
+      </a>
 
-      <section className={styles.hero}>
-        <div className={styles.heroCopy}>
-          <p className={styles.eyebrow}>Naples &amp; Southwest Florida</p>
-          <h1>A website you&apos;re proud of. <em>Built here in Naples.</em></h1>
-          <p className={styles.heroLead}>
-            I&apos;ll rebuild your website for $290 and help more local customers find you on Google and in AI search. We start with a free audit over coffee.
-          </p>
-          <div className={styles.actions}>
-            <a className={styles.primaryButton} href="#start">Book my free audit <span>→</span></a>
-            <a className={styles.secondaryButton} href="#how">See how it works</a>
+      <div className={styles.darkTop}>
+        <header className={styles.header}>
+          <Link className={styles.wordmark} href="/">Kerrie Mariah</Link>
+          <a className={styles.headerCta} href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Book a free audit <span>↗</span></a>
+        </header>
+
+        <section className={styles.hero}>
+          <div className={styles.heroCopy}>
+            <p className={styles.eyebrow}>For Naples &amp; Southwest Florida businesses</p>
+            <h1>A website you&apos;re proud of.</h1>
+            <p className={styles.heroLead}>
+              I&apos;ll rebuild your website for $290 and help more local customers find you on Google and in AI search. We start with a free audit over coffee.
+            </p>
+            <div className={styles.actions}>
+              <a className={styles.primaryButton} href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Book my free audit <span>→</span></a>
+              <a className={styles.secondaryButton} href="#offer">See what&apos;s included</a>
+            </div>
+            <ul className={styles.heroFacts}>
+              <li><strong>$290</strong>Full website revamp</li>
+              <li><strong>$450</strong>Per month SEO</li>
+              <li><strong>3 mo</strong>Then month-to-month</li>
+            </ul>
           </div>
-          <ul className={styles.heroFacts}>
-            <li><strong>$290</strong>Full website revamp</li>
-            <li><strong>$450</strong>Per month SEO</li>
-            <li><strong>3 mo</strong>Then month-to-month</li>
-          </ul>
-        </div>
 
-        <figure className={styles.heroVisual}>
-          <div className={styles.heroPhoto}>
+          <figure className={styles.heroVisual}>
+            <div className={styles.heroPhoto}>
+              <Image
+                src="/images/about/about-img.jpg"
+                alt="Kerrie going over a website with a business owner in person"
+                fill
+                priority
+                sizes="(max-width: 1100px) 92vw, 46vw"
+              />
+            </div>
+            <figcaption>Going over a site in person, the way it should be.</figcaption>
+            <div className={styles.heroNote}>
+              <strong>Free audit,</strong>
+              <span>over coffee. On me.</span>
+            </div>
+          </figure>
+        </section>
+      </div>
+
+      <div className={styles.proofStrip}>
+        <span>Recent work</span>
+        <div className={styles.marquee}>
+          <div className={styles.marqueeTrack}>
+            {[0, 1].map((copy) => (
+              <div key={copy} className={styles.marqueeGroup} aria-hidden={copy === 1 || undefined}>
+                {recentWork.map((site) => (
+                  <a
+                    key={site.name}
+                    href={site.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    tabIndex={copy === 1 ? -1 : undefined}
+                  >
+                    {site.name}
+                  </a>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <section className={styles.pain}>
+        <div className={styles.sectionHead}>
+          <span className={styles.sectionLabel}>Sound familiar?</span>
+          <h2>Your website should be bringing you customers.</h2>
+        </div>
+        <div className={styles.painBody}>
+          <div className={styles.painPhoto}>
             <Image
-              src="/images/about/about-img.jpg"
-              alt="Kerrie going over a website with a business owner in person"
+              src="/images/seo-revamp/frustrated-owner.jpg"
+              alt="A frustrated business owner with her head in her hand at a laptop"
               fill
-              priority
-              sizes="(max-width: 1100px) 92vw, 46vw"
+              sizes="(max-width: 700px) 92vw, 540px"
             />
           </div>
-          <figcaption>Going over a site in person, the way it should be.</figcaption>
-          <div className={styles.heroNote}>
-            <strong>Free audit,</strong>
-            <span>over coffee. On me.</span>
-          </div>
-        </figure>
+          <ul className={styles.painList}>
+            {pains.map((pain) => (
+              <li key={pain.text}>
+                <span className={styles.painIcon}>
+                  <Icon path={pain.icon} />
+                  <b>✕</b>
+                </span>
+                {pain.text}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <p className={styles.bridge}>I fix all four. Here&apos;s how it works.</p>
       </section>
 
       <section className={styles.how} id="how">
+        <div className={styles.howPerson} aria-hidden="true">
+          <Image src="/images/slider/person1.png" alt="" fill sizes="(max-width: 700px) 46vw, 380px" />
+        </div>
         <div className={styles.sectionHead}>
           <span className={styles.sectionLabel}>How it works</span>
           <h2>Simple, and in person.</h2>
@@ -120,90 +200,46 @@ export default function SeoRevampPage() {
             </li>
           ))}
         </ol>
-      </section>
-
-      <section className={styles.included} id="included">
-        <div className={styles.sectionHead}>
-          <span className={styles.sectionLabel}>What&apos;s included</span>
-          <h2>Everything you need to get found.</h2>
-        </div>
-
-        <div className={styles.bento}>
-          <article className={`${styles.tile} ${styles.tileAi}`}>
-            <div className={styles.chat} aria-hidden="true">
-              <p className={styles.chatQuestion}>Who&apos;s the best plumber in Naples?</p>
-              <div className={styles.chatAnswer}>
-                <span className={styles.chatAvatar}>AI</span>
-                <p>A top local option is <mark>Your Business</mark>, known for fast, friendly service and great reviews.</p>
-              </div>
-              <span className={styles.chatSource}>Source · yourbusiness.com</span>
-            </div>
-            <h3>AI SEO</h3>
-            <p>Get mentioned when customers ask AI for a recommendation.</p>
-          </article>
-
-          <article className={`${styles.tile} ${styles.tileLocal}`}>
-            <div className={styles.listings} aria-hidden="true">
-              <div className={styles.listingTop}><span>📍</span> plumber near me</div>
-              <div className={styles.listingYou}><b>1</b><span>Your Business</span><em>★★★★★</em></div>
-              <div><b>2</b><span>Competitor</span><em>★★★★</em></div>
-              <div><b>3</b><span>Competitor</span><em>★★★</em></div>
-            </div>
-            <h3>Local SEO</h3>
-            <p>Rank in Google Maps and local search across Southwest Florida.</p>
-          </article>
-
-          <article className={`${styles.tile} ${styles.tileReport}`}>
-            <div className={styles.report} aria-hidden="true">
-              <div className={styles.reportHead}>
-                <span>Monthly report</span>
-                <em>Sample</em>
-              </div>
-              <div className={styles.reportBars}>
-                {reportBars.map((height, index) => <i key={index} style={{ height: `${height}%` }} />)}
-              </div>
-              <div className={styles.reportStats}>
-                <span><b>Visits</b>↑</span>
-                <span><b>Calls</b>↑</span>
-                <span><b>Rank</b>↑</span>
-              </div>
-            </div>
-            <h3>Clear reporting</h3>
-            <p>One simple report a month: what improved and what&apos;s next.</p>
-          </article>
-
-          <article className={`${styles.tile} ${styles.tilePhoto}`}>
-            <Image src="/images/seo-revamp/naples-pier.jpg" alt="Naples Pier at sunset" fill sizes="(max-width: 800px) 100vw, 50vw" />
-            <div>
-              <h3>A real person, right here in Naples.</h3>
-              <p>Sit down face to face. No call centers, no runaround.</p>
-            </div>
-          </article>
-        </div>
+        <SectionCta note="Step one is free. No obligation." />
       </section>
 
       <section className={styles.offer} id="offer">
-        <div className={styles.offerCopy}>
+        <div className={styles.offerHead}>
           <span className={styles.sectionLabel}>The offer</span>
-          <h2>One simple plan.</h2>
-          <p>A website that looks the part, and the SEO to make sure people actually see it.</p>
+          <h2>Here&apos;s exactly what you get.</h2>
         </div>
         <div className={styles.offerCard}>
-          <div className={styles.offerLine}>
-            <span>Full website revamp <small>one-time</small></span>
-            <strong>$290 <s>$800+</s></strong>
-          </div>
-          <div className={`${styles.offerLine} ${styles.offerMain}`}>
-            <span>Local + AI SEO</span>
-            <strong>$450<small>/month</small></strong>
-          </div>
-          <ul>
-            {included.map((item) => <li key={item}><span>✓</span>{item}</li>)}
+          <ul className={styles.stack}>
+            {stack.map((item) => (
+              <li key={item.title}>
+                <span className={styles.stackCheck}>✓</span>
+                <div>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
+                <strong>
+                  {item.was && <s>{item.was}</s>}
+                  {item.value}
+                </strong>
+              </li>
+            ))}
           </ul>
+          <div className={styles.priceBox}>
+            <div>
+              <span>Website revamp</span>
+              <strong>$290 <small>one-time</small></strong>
+            </div>
+            <i>+</i>
+            <div>
+              <span>Google &amp; AI search plan</span>
+              <strong>$450 <small>/month</small></strong>
+            </div>
+          </div>
           <p className={styles.offerTerms}>
             <strong>3-month minimum, then month-to-month.</strong> Cancel anytime after your first three months.
           </p>
-          <a className={styles.primaryButton} href="#start">Book my free audit <span>→</span></a>
+          <a className={styles.primaryButton} href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Book my free audit <span>→</span></a>
+          <p className={styles.offerNote}>We start with a free audit. You only sign up if it makes sense.</p>
         </div>
       </section>
 
@@ -232,6 +268,7 @@ export default function SeoRevampPage() {
           <blockquote>&ldquo;Working with Kerrie was an absolute game-changer for our business. She is efficient, incredibly knowledgeable, and went above and beyond.&rdquo;</blockquote>
           <figcaption>Paul Harrison, QuboHub</figcaption>
         </figure>
+        <SectionCta />
       </section>
 
       <section className={styles.about}>
@@ -246,6 +283,12 @@ export default function SeoRevampPage() {
           </p>
           <p>No jargon, no call centers, no disappearing after launch. Just me, and a plan that makes sense.</p>
           <Image className={styles.signature} src="/images/about/signature.png" alt="Kerrie Mariah's signature" width={180} height={70} />
+          <div className={styles.letterLinks}>
+            <a className={styles.textLink} href="https://www.linkedin.com/in/kerriemariah/" target="_blank" rel="noopener noreferrer">
+              Connect with me on LinkedIn <span>↗</span>
+            </a>
+            <a className={styles.textLink} href="mailto:kerrie@kerriemariah.com">Email me</a>
+          </div>
           <ul className={styles.creds}>
             <li>Former Deutsche Bank / BNP Paribas engineer</li>
             <li>Softr Certified Professional</li>
@@ -274,12 +317,16 @@ export default function SeoRevampPage() {
           <span className={styles.sectionLabel}>Get started</span>
           <h2>Let&apos;s grab a coffee.</h2>
           <p>Answer three quick questions and I&apos;ll reach out to set up a time to meet.</p>
+          <a className={styles.emailLink} href="mailto:kerrie@kerriemariah.com">kerrie@kerriemariah.com</a>
           <ul>
             <li><span>✓</span>Free audit of your current site</li>
             <li><span>✓</span>$290 full website revamp</li>
             <li><span>✓</span>Meet in person in Naples</li>
           </ul>
-          <a className={styles.textLink} href="https://tidycal.com/kerriemariah/15-minute-meeting" target="_blank" rel="noopener noreferrer">
+          <p className={styles.scarcity}>
+            Because I meet every client in person, I only take on a few new businesses each month.
+          </p>
+          <a className={styles.textLink} href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
             Prefer to pick a time? Book a call <span>↗</span>
           </a>
         </div>
@@ -289,9 +336,9 @@ export default function SeoRevampPage() {
       <footer className={styles.footer}>
         <span>© {new Date().getFullYear()} Kerrie Mariah &amp; Associates, LLC · Naples, Florida</span>
         <span>
-          Pier photo:{" "}
-          <a href="https://commons.wikimedia.org/wiki/File:Naples_Pier_At_Sunset_Florida_United_States_Travel_Photography_(194139203).jpeg" target="_blank" rel="noopener noreferrer">Giuseppe Milo</a>,{" "}
-          <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC BY 3.0</a>
+          <Link href="/privacy-policy">Privacy policy</Link> · <Link href="/terms-of-service">Terms</Link> · Photo:{" "}
+          <a href="https://commons.wikimedia.org/wiki/File:Frustrated_woman_working_on_laptop_in_a_bright_kitchen.jpg" target="_blank" rel="noopener noreferrer">Shixart1985</a>,{" "}
+          <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a>
         </span>
       </footer>
 

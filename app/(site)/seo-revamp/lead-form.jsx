@@ -7,7 +7,7 @@ const goals = ["More phone calls", "A website I'm proud of", "Ranking on Google"
 const meetingOptions = ["Coffee in Naples", "At my business", "Video call"];
 const steps = ["Your goals", "Your business", "Your details"];
 
-const BOOKING_URL = "https://tidycal.com/kerriemariah/15-minute-meeting";
+const BOOKING_URL = "https://schedule.kerriemariah.com/in-person-website-audit";
 
 export default function LeadForm() {
   const [step, setStep] = useState(0);

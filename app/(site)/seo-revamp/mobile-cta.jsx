@@ -15,7 +15,7 @@ export default function MobileCta() {
   }, []);
 
   return (
-    <a className={`${styles.mobileCta} ${hidden ? styles.mobileCtaHidden : ""}`} href="#start" aria-hidden={hidden} tabIndex={hidden ? -1 : 0}>
+    <a className={`${styles.mobileCta} ${hidden ? styles.mobileCtaHidden : ""}`} href="https://schedule.kerriemariah.com/in-person-website-audit" target="_blank" rel="noopener noreferrer" aria-hidden={hidden} tabIndex={hidden ? -1 : 0}>
       <span>Free audit over coffee</span>
       <b>Book →</b>
     </a>
