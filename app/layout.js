@@ -2,7 +2,6 @@ import Preloader from "@/components/ui/preloader";
 import { cormorantGaramond, openSans } from "./fonts";
 import "./globals.css";
 import Providers from "./providers";
-import Script from "next/script";
 
 export const metadata = {
     metadataBase: new URL("https://kerriemariah.com"),
@@ -29,24 +28,28 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
+            <head>
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQTEDTV3G6" />
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag(){dataLayer.push(arguments);}
+                            gtag('js', new Date());
+                            gtag('config', 'G-VQTEDTV3G6');
+                            gtag('config', 'AW-17527099253');
+                            gtag('event', 'conversion', {
+                                'send_to': 'AW-17527099253/lhzvCLXaiJMbEPWeyaVB',
+                                'value': 1.0,
+                                'currency': 'USD'
+                            });
+                        `,
+                    }}
+                />
+            </head>
             <body
                 className={`${cormorantGaramond.variable} ${openSans.className}`}
             >
-                {/* Google Analytics */}
-                <Script
-                    src="https://www.googletagmanager.com/gtag/js?id=G-VQTEDTV3G6"
-                    strategy="afterInteractive"
-                />
-                <Script id="google-analytics" strategy="afterInteractive">
-                    {`
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-                        gtag('config', 'G-VQTEDTV3G6');
-                        gtag('config', 'AW-17527099253');
-                    `}
-                </Script>
-
                 <Preloader />
                 <Providers>{children}</Providers>
             </body>

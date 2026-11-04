@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
 import BeforeAfter from "./before-after";
 import LeadForm from "./lead-form";
 import MobileCta from "./mobile-cta";
@@ -59,13 +58,13 @@ export const metadata = {
     title: "A website you're proud of, built here in Naples.",
     description: "$290 full website revamp with local + AI SEO for $450/month. Free in-person audit in Naples.",
     url: "/seo-revamp",
-    images: ["/images/about/about-img.jpg"],
+    images: ["/images/featured/featureimage.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "$290 Website Revamp + Local SEO for Naples, FL Businesses",
     description: "$290 full website revamp with local + AI SEO for $450/month. Free in-person audit in Naples.",
-    images: ["/images/about/about-img.jpg"],
+    images: ["/images/featured/featureimage.png"],
   },
 };
 
@@ -133,17 +132,6 @@ function SectionCta({ note }) {
 export default function SeoRevampPage() {
   return (
     <main className={styles.page}>
-      <Script id="seo-revamp-conversion" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('event', 'conversion', {
-            'send_to': 'AW-17527099253/lhzvCLXaiJMbEPWeyaVB',
-            'value': 1.0,
-            'currency': 'USD'
-          });
-        `}
-      </Script>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <a className={styles.topBar} href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
